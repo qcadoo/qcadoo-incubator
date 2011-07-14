@@ -69,9 +69,10 @@ public class WarehouseService {
         return true;
     }
 
-    public void setResourceInitialQuantity(final ViewDefinitionState state, final ComponentState componentState, final String[] args) {
-        if (componentState.getFieldValue() == null) {
-            ComponentState quantity = (ComponentState) state.getComponentByReference("quantity");
+    public void setResourceInitialQuantity(final ViewDefinitionState state) {
+
+        ComponentState quantity = (ComponentState) state.getComponentByReference("quantity");
+        if(quantity.getFieldValue() == null) {
             quantity.setFieldValue(0);
         }
     }
