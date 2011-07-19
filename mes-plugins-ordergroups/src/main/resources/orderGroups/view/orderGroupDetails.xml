@@ -60,6 +60,9 @@
 							
 							<option type="order" column="number" direction="desc" />
 
+                            <option type="searchable" value="name,number,dateFrom,dateTo" />
+                            <option type="orderable" value="name,number,dateFrom,dateTo" />
+
  							<option type="correspondingView" value="orderGroups/orderGroupOrderLookup" />
 							<option type="correspondingComponent" value="form" />
 							<option type="correspondingViewInModal" value="true" />

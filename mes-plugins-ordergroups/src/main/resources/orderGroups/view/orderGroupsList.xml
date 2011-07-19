@@ -16,8 +16,8 @@
 			<option type="order" column="name" direction="asc" />
 			<option type="correspondingView" value="orderGroups/orderGroupDetails" />
 			<option type="correspondingComponent" value="form" />
-			<option type="searchable" value="name,number,start,end" />
-			<option type="orderable" value="name,number,start,end" />
+			<option type="searchable" value="name,number,dateFrom,dateTo" />
+			<option type="orderable" value="name,number,dateFrom,dateTo" />
 			<option type="fullscreen" value="true" />
 			<option type="multiselect" value="true" />
 		</component>

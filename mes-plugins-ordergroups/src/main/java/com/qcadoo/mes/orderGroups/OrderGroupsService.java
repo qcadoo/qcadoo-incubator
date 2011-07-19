@@ -67,14 +67,8 @@ public class OrderGroupsService {
 		for(String reference : buttonReferences) {
 			window.getRibbon().getGroupByName("ordersActions").getItemByName(reference).setEnabled(value);
 		}
-		
 	}
-	
-//	public void filterOrdersByGroups(final ViewDefinitionState viewDefinitionState) {
-//		String groupId = viewDefinitionState.getComponentByReference("orderGroupValuesHolder").getFieldValue().toString();
-//		viewDefinitionState.addMessage(groupId, MessageType.INFO);
-//	}
-	
+		
 	/* ****** CUSTOM EVENT LISTENER ****** */
 	
 	public void removeOrderFromGroup(final ViewDefinitionState viewDefinitionState, ComponentState componentState, String[] args) {
@@ -155,18 +149,7 @@ public class OrderGroupsService {
 		// Redirect to 'successful' view (perform action like window.goBack)
 		viewDefinitionState.redirectTo("/page/orderGroups/orderGroupDetails.html?context={\"form.id\":\"" + groupId + "\"}", false, false);		
 	}
-	
-	
-//	public void showOrdersAssignedToGroup(final ViewDefinitionState viewDefinitionState, final ComponentState componentState, final String[] args) {
-//		JSONObject context = new JSONObject();
-//		try {
-//			context.put("orderGroupValuesHolder.id", 999);
-//		} catch (JSONException e) {
-//			e.printStackTrace();
-//		}
-//		
-//		viewDefinitionState.redirectTo("/page/orders/ordersList.html?context=" + context.toString(), false, true);
-//	}
+
 	
 	/* ****** VALIDATORS ****** */
 
@@ -188,7 +171,6 @@ public class OrderGroupsService {
 				return false;
 			}
 		}
-		
 		return true;
 	}
 	
@@ -197,7 +179,6 @@ public class OrderGroupsService {
 		if(!checkOrderGroupComponentDateRange(group, Arrays.asList(order))) {
 			order.addError(dataDefinition.getField("orderGroup"), OrderGroupsConstants.DATE_RANGE_ERROR);
 		}
-		
 		return true;
 	}
 	
@@ -224,7 +205,6 @@ public class OrderGroupsService {
 				return false;
 			}
 		}
-		
 		return true;
 	}
 
