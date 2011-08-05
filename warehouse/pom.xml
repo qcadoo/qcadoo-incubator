@@ -8,10 +8,10 @@
 	<groupId>com.qcadoo.mes</groupId>
 	<packaging>qcadoo-plugin</packaging>
 	<name>Warehouse module</name>
-	<version>0.4.3</version>
+	<version>0.4.5</version>
 
 	<properties>
-		<qcadoo.version>0.4.3</qcadoo.version>
+		<qcadoo.version>0.4.5</qcadoo.version>
 	</properties>
 
 	<build>

@@ -20,7 +20,7 @@
         <name>Warehouse Module</name>
         <vendor>
             <name>Warehouse Corp</name>
-            <url>www.warehousecorp.con</url>
+            <url>www.warehousecorp.com</url>
         </vendor>
     </information>
     
@@ -40,13 +40,13 @@
         <menu:menu-category name="warehouse" />
 
         <menu:menu-item name="resources" category="warehouse"
-            view="resourceList" />
+            view="resourcesList" />
         <menu:menu-item name="transfers" category="warehouse"
-            view="transferList" />
+            view="transfersList" />
 
-        <view:view resource="view/resourceList.xml" />
+        <view:view resource="view/resourcesList.xml" />
         <view:view resource="view/resourceDetails.xml" />
-        <view:view resource="view/transferList.xml"/>
+        <view:view resource="view/transfersList.xml"/>
         <view:view resource="view/transferDetails.xml" />
         
         <view:resource uri="public/**/*" />
