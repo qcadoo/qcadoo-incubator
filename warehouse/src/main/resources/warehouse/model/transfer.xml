@@ -26,7 +26,7 @@
              it will when we close it; this field should not be set by the edit
              from but by a proper business method
         -->
-        <enum name="status" values="planned,done" default="planned" required="true" />
+        <enum name="status" values="01planned,02done" required="true" default="01planned"/>
         <!-- when we planned to close this transfer; we will have to use a
              custom validator do check if it is in the future
         -->
@@ -45,8 +45,8 @@
     </fields>
     <hooks>
         <!-- the hook that sets the request worker and date -->
-        <onCreate class="com.warehousecorporation.warehouse.WarehouseService" method="setTransferRequestData" />
+        <onCreate class="com.qcadoo.mes.warehouse.WarehouseService" method="setTransferRequestData" />
         <!-- a validator that checks if the planedDate is in the future -->
-        <validatesWith class="com.warehousecorporation.warehouse.WarehouseService" method="checkIfPlanedDateInFuture" />
+        <validatesWith class="com.qcadoo.mes.warehouse.WarehouseService" method="checkIfPlanedDateInFuture" />
     </hooks>
 </model>

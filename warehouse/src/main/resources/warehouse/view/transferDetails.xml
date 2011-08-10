@@ -26,11 +26,9 @@
         <component type="form" name="form" reference="form">
             <script>
                     <![CDATA[
-                            console.log("halo");
                             var executeTransfer = #{window}.getRibbonItem("status.executeTransfer");
-                            var status = #{status}.getValue();
-                            console.log(status); // see that content.value is when it shouldn't be
-                            if(status == "planning") {
+                            var status = #{status}.getValue().content.value;
+                            if(status == "01planned") {
                                 executeTransfer.enable();
                             }
                     ]]>
@@ -55,7 +53,7 @@
                     <component type="input" name="quantity" field="quantity" />
                 </layoutElement>
                 <layoutElement column="1" row="4">
-                    <component type="select" name="type" field="type" />
+                    <component type="select" name="type" field="type" reference="type"/>
                 </layoutElement>
                 <layoutElement column="1" row="5">
                     <component type="calendar" name="plannedDate" field="plannedDate" />
@@ -73,7 +71,7 @@
                     <component type="calendar" name="confirmDate" field="confirmDate" defaultEnabled="false" />
                 </layoutElement>
                 <layoutElement column="2" row="5">
-                    <component type="input" name="status" field="status" defaultEnabled="false" reference="status" />
+                    <component type="select" name="status" field="status" reference="status" defaultEnabled="false"/>
                 </layoutElement>
             </component>
             <option type="expression" value="#quantity + ' x ' + #resource['number']" />
