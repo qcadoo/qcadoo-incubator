@@ -13,7 +13,7 @@
 	                    this.element.width(100);
 	                    this.addOnChangeListener({
 	                        onClick: function() {
-                                    if (window.confirm("#{translate(warehouse.transferList.window.ribbon.status.executeTransfer.confirm)}")) {
+                                    if (window.confirm("#{translate(warehouse.transferDetails.window.ribbon.status.executeTransfer.confirm)}")) {
                                             #{form}.performEvent('executeTransferForForm');
                                     };
 	                        }
@@ -56,19 +56,25 @@
                     <component type="select" name="type" field="type" reference="type"/>
                 </layoutElement>
                 <layoutElement column="1" row="5">
-                    <component type="calendar" name="plannedDate" field="plannedDate" />
+                    <component type="calendar" name="plannedDate" field="plannedDate">
+                        <option type="withTimePicker" value="true" />
+                    </component>
                 </layoutElement>
                 <layoutElement column="2" row="1">
                     <component type="input" name="requestWorker" field="requestWorker" defaultEnabled="false" />
                 </layoutElement>
                 <layoutElement column="2" row="2">
-                    <component type="calendar" name="requestDate" field="requestDate" defaultEnabled="false" />
+                    <component type="calendar" name="requestDate" field="requestDate" defaultEnabled="false">
+                        <option type="withTimePicker" value="true" />
+                    </component>
                 </layoutElement>
                 <layoutElement column="2" row="3">
                     <component type="input" name="confirmWorker" field="confirmWorker" defaultEnabled="false" />
                 </layoutElement>
                 <layoutElement column="2" row="4">
-                    <component type="calendar" name="confirmDate" field="confirmDate" defaultEnabled="false" />
+                    <component type="calendar" name="confirmDate" field="confirmDate" defaultEnabled="false">
+                        <option type="withTimePicker" value="true" />
+                    </component>
                 </layoutElement>
                 <layoutElement column="2" row="5">
                     <component type="select" name="status" field="status" reference="status" defaultEnabled="false"/>
@@ -76,6 +82,7 @@
             </component>
             <option type="expression" value="#quantity + ' x ' + #resource['number']" />
             <option type="header" value="false" />
+            <listener event="executeTransferForForm" class="com.warehousecorporation.warehouse.WarehouseService" method="executeTransferForForm" />
         </component>
     </component>
     <hooks>

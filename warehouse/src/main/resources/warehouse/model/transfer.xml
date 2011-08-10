@@ -21,7 +21,7 @@
         <!-- an incoming transfer will add resource and an outgoing one will
              remove resource from the warehouse
         -->
-        <enum name="type" values="incoming,outgoing" required="true" />
+        <enum name="type" values="01incoming,02outgoing" required="true" />
         <!-- a pending transfer did not modify the resources quantity yet, but
              it will when we close it; this field should not be set by the edit
              from but by a proper business method
@@ -45,8 +45,8 @@
     </fields>
     <hooks>
         <!-- the hook that sets the request worker and date -->
-        <onCreate class="com.qcadoo.mes.warehouse.WarehouseService" method="setTransferRequestData" />
+        <onCreate class="com.warehousecorporation.warehouse.WarehouseService" method="setTransferRequestDate" />
         <!-- a validator that checks if the planedDate is in the future -->
-        <validatesWith class="com.qcadoo.mes.warehouse.WarehouseService" method="checkIfPlanedDateInFuture" />
+        <validatesWith class="com.warehousecorporation.warehouse.WarehouseService" method="checkIfPlanedDateInFuture" />
     </hooks>
 </model>
