@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- the 'name' attribute determines the the name of the view, not the file
+     name;
+     the modelName attribute describes on which entities fields
+     do we concentrate here;
+     the menuAccessible attribute indicates that this view will be available
+     from the main menu
+-->
+<view name="resourcesList" modelName="resource" menuAccessible="true"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schema.qcadoo.org/view"
+    xsi:schemaLocation="http://schema.qcadoo.org/view http://schema.qcadoo.org/view.xsd">
+
+    <!-- a window is always the most outer container for other components -->
+    <component type="window" name="window">
+        <!-- a ribbon is the big horizontal menu at the top -->
+        <ribbon>
+            <!-- a group contains several buttons; you can use group templates
+                 to insert buttons which are hooked to default actions that
+                 do simple navigation and CRUD operations
+            -->
+            <group template="gridNewCopyAndRemoveAction" />
+        </ribbon>
+        <!-- grid = table -->
+        <component type="grid" name="grid" reference="grid">
+            <!-- you tell this grid which columns to show using multiple
+                 'column' options; in each column you can tell which
+                 field to show from the entity pointed out by the modelName
+                 attribute
+            -->
+            <option type="column" name="number" fields="number" link="true" />
+            <option type="column" name="product" expression="#product['name']" link="true" />
+            <option type="column" name="quantity" fields="quantity" />
+            <!-- these options indicate to which view should we jump when we
+                 click to edit an entity from the table or to add a new one;
+                 in correspondingView we point out the view path:
+                 plugin_name/view_name
+                 and in the correspondingComponent we point out the components
+                 reference in the view to which we want to bind the selected
+                 entity
+            -->
+            <option type="correspondingView" value="warehouse/resourceDetails" />
+            <option type="correspondingComponent" value="form" />
+            <!-- this option points out which columns can be filtered -->
+            <option type="searchable" value="number,product" />
+            <!-- this option points out which columns change the order
+                 in the grid
+            -->
+            <option type="orderable" value="number,product" />
+            <option type="fullScreen" value="true" />
+            <!-- this option indicates by which column should the grid be
+                 ordered by default
+            -->
+            <option type="order" column="number" direction="asc"/>
+        </component>
+        <option type="fixedHeight" value="true" />
+        <option type="header" value="false" />
+    </component>
+    <hooks>
+    </hooks>
+</view>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- remember that this 'name' attribute determines the name of the entity,
+     not the file name
+-->
+<model name="resource"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schema.qcadoo.org/model"
+    xsi:schemaLocation="http://schema.qcadoo.org/model http://schema.qcadoo.org/model.xsd">
+
+    <fields>
+        <!-- a number to evidence a certain resource -->
+        <string name="number" required="true" unique="true" />
+        <!-- an unidirectional many-to-one relation to the product entity
+             from the 'basic' plugin
+        -->
+        <belongsTo name="product" required="true" model="product" plugin="basic" />
+        <!-- amount of resource in this evidence record; we don't accept
+             negative values
+        -->
+        <decimal name="quantity" default="0" >
+            <validatesRange from="0" />
+        </decimal>
+        <!-- a bidirectional many-to-one relation to the transfer entity;
+             the transfer entity will have a resource field of type belongsTo,
+             we will join by this field
+        -->
+        <hasMany name="transfers" model="transfer" joinField="resource" />
+    </fields>
+    <hooks>
+    </hooks>
+    <identifier expression="#number" />
+</model>

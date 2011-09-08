@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<view name="resourceDetails" modelName="resource"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schema.qcadoo.org/view"
+    xsi:schemaLocation="http://schema.qcadoo.org/view http://schema.qcadoo.org/view.xsd">
+
+    <component type="window" name="window">
+        <ribbon>
+            <group template="navigation" />
+            <!-- the template for form CRUD buttons is a little different from
+                 the list buttons
+            -->
+            <group template="formSaveCopyAndRemoveActions" />
+        </ribbon>
+        <!-- typical form which holds fields -->
+        <component type="form" name="form" reference="form">
+            <!-- input field for the number; the 'name' attribute holds the
+                 name of the component, the 'field' attribute points out
+                 the field of the entity from the modelName attribute
+            -->
+            <component type="input" name="number" field="number" />
+            <!-- a lookup field in which you can select the entity -->
+            <component type="lookup" name="product" field="product">
+                <!-- standard grid option which will be used in the grid
+                     that appears after you click the loop icon
+                -->
+                <option type="column" name="number" fields="number" link="true" />
+                <option type="column" name="name" fields="name" link="true" />
+                <option type="searchable" value="name,category" />
+                <option type="orderable" value="name,category" />
+                <option type="fullScreen" value="true" />
+                <option type="expression" value="#name" />
+                <!-- the field code indicates which field will be used to
+                     shot in the lookup field after the selection was made
+                -->
+                <option type="fieldCode" value="number" />
+            </component>
+            <!-- we must use the reference if we want to do something with
+                 this component in the Java code
+            -->
+            <component type="input" name="quantity" field="quantity" reference="resourceQuantity" />
+            <option type="expression" value="#quantity + ' x ' + #number + ' (' + #product['name'] + ')'" />
+            <!-- we don't want to show the forms header, the window will
+                 already have one
+            -->
+            <option type="header" value="false" />
+        </component>
+    </component>
+    <hooks>
+    </hooks>
+</view>
