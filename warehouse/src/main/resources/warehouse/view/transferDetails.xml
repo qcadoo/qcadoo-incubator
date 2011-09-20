@@ -1,4 +1,3 @@
-
 <view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schema.qcadoo.org/view"
 	xsi:schemaLocation="http://schema.qcadoo.org/view http://schema.qcadoo.org/view.xsd"
 	name="transferDetails" modelName="transfer">
@@ -6,33 +5,8 @@
         <ribbon>
             <group template="navigation" />
             <group template="formSaveCopyAndRemoveActions" />
-            <group name="status">
-                <bigButton name="executeTransfer" icon="startIcon24.png" state="disabled">
-                    <script>
-	                <![CDATA[
-	                    this.element.width(100);
-	                    this.addOnChangeListener({
-	                        onClick: function() {
-                                    if (window.confirm("#{translate(warehouse.transferDetails.window.ribbon.status.executeTransfer.confirm)}")) {
-                                            #{form}.performEvent('executeTransferForForm');
-                                    };
-	                        }
-	                    });
-	                ]]>
-                    </script>
-                </bigButton>
-            </group>
         </ribbon>
         <component type="form" name="form" reference="form">
-            <script>
-                    <![CDATA[
-                            var executeTransfer = #{window}.getRibbonItem("status.executeTransfer");
-                            var status = #{status}.getValue().content.value;
-                            if(status == "01planned") {
-                                executeTransfer.enable();
-                            }
-                    ]]>
-            </script>
             <!-- a grid layout component gives us more control how the inputs will be positioned -->
             <component type="gridLayout" name="gridLayout" columns="2" rows="5" hasBorders="false">
                 <layoutElement column="1" row="1">
@@ -61,28 +35,27 @@
                     </component>
                 </layoutElement>
                 <layoutElement column="2" row="1">
-                    <component type="input" name="requestWorker" field="requestWorker" defaultEnabled="false" />
+                    <component type="input" name="requestWorker" field="requestWorker"  />
                 </layoutElement>
                 <layoutElement column="2" row="2">
-                    <component type="calendar" name="requestDate" field="requestDate" defaultEnabled="false">
+                    <component type="calendar" name="requestDate" field="requestDate" >
                         <option type="withTimePicker" value="true" />
                     </component>
                 </layoutElement>
                 <layoutElement column="2" row="3">
-                    <component type="input" name="confirmWorker" field="confirmWorker" defaultEnabled="false" />
+                    <component type="input" name="confirmWorker" field="confirmWorker" />
                 </layoutElement>
                 <layoutElement column="2" row="4">
-                    <component type="calendar" name="confirmDate" field="confirmDate" defaultEnabled="false">
+                    <component type="calendar" name="confirmDate" field="confirmDate" >
                         <option type="withTimePicker" value="true" />
                     </component>
                 </layoutElement>
                 <layoutElement column="2" row="5">
-                    <component type="select" name="status" field="status" reference="status" defaultEnabled="false"/>
+                    <component type="select" name="status" field="status" reference="status" />
                 </layoutElement>
             </component>
             <option type="expression" value="#quantity + ' x ' + #resource['number']" />
             <option type="header" value="false" />
-            <listener event="executeTransferForForm" class="com.warehousecorporation.warehouse.WarehouseService" method="executeTransferForForm" />
         </component>
     </component>
     <hooks>

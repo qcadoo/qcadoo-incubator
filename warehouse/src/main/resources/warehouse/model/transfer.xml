@@ -34,19 +34,17 @@
         <!-- the worker that requested the transfer to be done and the date
              when the request was made; this will be set automatically by a hook
         -->
-        <string name="requestWorker" />
-        <datetime name="requestDate" />
-        <!-- the worker that confirmed that the transfer was closed and the date
+        <string name="requestWorker" readonly="true" />
+        <datetime name="requestDate" readonly="true" />
+        <!-- the worker that confirmed that the transfer was done and the date
              when it happened; this will be set automatically by a proper
              business method
         -->
-        <string name="confirmWorker" />
-        <datetime name="confirmDate" />
+        <string name="confirmWorker" readonly="true" />
+        <datetime name="confirmDate" readonly="true" />
     </fields>
     <hooks>
-        <!-- the hook that sets the request worker and date -->
-        <onCreate class="com.warehousecorporation.warehouse.WarehouseService" method="setTransferRequestDate" />
-        <!-- a validator that checks if the planedDate is in the future -->
-        <validatesWith class="com.warehousecorporation.warehouse.WarehouseService" method="checkIfPlanedDateInFuture" />
+        <onSave class="com.warehousecorporation.warehouse.WarehouseService" method="setWorkersDatesAndResourceQuantity" />
+        <validatesWith class="com.warehousecorporation.warehouse.WarehouseService" method="checkIfHasEnoughtQuantity" />
     </hooks>
 </model>
