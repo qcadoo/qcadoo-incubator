@@ -1,0 +1,464 @@
+<html>
+<head><title>Transfer Data Collector</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<script type="text/javascript" src="json_parser.js"></script>
+<script type="text/javascript" src="upload.js"></script>
+<script type="text/javascript">
+
+
+productOK = false;
+quantityOK = false;
+fromOK = false;
+toOK = false;
+typeOK = false;
+defaultUser = false;
+
+	var json = {
+		"products" : {
+				"a" : {"name" : "Oak board 10x160"},
+				"OB324" : {"name" : "Oak board 10x160"},
+				"OB325" : {"name" : "Oak board 20x160"},
+				"OB326" : {"name" : "Oak board 30x160"},
+				"OB327" : {"name" : "Oak board 40x160"},
+				"OB328" : {"name" : "Oak board 50x160"},
+				"OB329" : {"name" : "Oak board 60x160"},
+				"OB330" : {"name" : "Oak board 70x160"}
+			},
+		"warehouses" : {
+				"a" : {"name" : "Stations a"},
+				"W1" : {"name" : "Stations 1"},
+				"W2" : {"name" : "Stations 2"},
+				"W3" : {"name" : "Stations 3"},
+				"W4" : {"name" : "Stations 4"},
+				"W5" : {"name" : "Stations 5"},
+				"W6" : {"name" : "Stations 6"},
+				"W7" : {"name" : "Stations 7"}
+		},
+		
+		"transferTypes" : [ "transport", "consumption", "type1", "type2", "type3", "type4", "a" ],
+		
+		"defaults" : {
+				"product" : "",
+				"quantity" : "",
+				"from" : "W1",
+				"to" : "W2",
+				"type" : "transport"
+		}			
+		
+	}
+
+	function hasProduct(name){ return (json.products.hasOwnProperty(name)); }
+	function hasWarehouse(name){ return (json.warehouses.hasOwnProperty(name)); }
+	function hasTransferType(name){
+		for (var i in json.transferTypes){
+			if (json.transferTypes[i] == name) return true; //return true;
+		}
+		return false;
+	}
+	
+	function setActualTransferNumber(n)	{ 
+		if (localStorage.getItem('actualTransferNumber') == null) {
+			localStorage.setItem('actualTransferNumber', '1');
+		}
+		else {
+			localStorage.setItem('actualTransferNumber', n.toString());
+		}
+	}
+	
+	function getActualTransferNumber()	{ 
+		if (localStorage.getItem('actualTransferNumber') == null) {
+			localStorage.setItem('actualTransferNumber', '0');
+			return 0;
+		}
+		else return parseInt(localStorage.getItem('actualTransferNumber')); 	
+	}
+	
+	function upload_data(){
+		window.location.href="send.html";
+	}
+	
+	function getName() {
+		var tmp = getActualTransferNumber();
+		var newNumber = ++tmp;
+		setActualTransferNumber(newNumber);
+		var str = 'transfer(' + newNumber +  ')';
+		return str;
+	}
+	
+	
+	function allOK(){
+		if (!productOK) {
+			document.main.product.disabled = false;
+			document.main.product.focus();
+			//document.getElementById('history').innerHTML = 'Fill the Product!';
+			return false;
+		}
+		else if (!quantityOK) {
+			document.main.quantity.disabled = false;
+			document.main.quantity.focus();
+			//document.getElementById('history').innerHTML = 'Fill the Quantity!';
+			return false;
+		}
+		else if (!fromOK) {
+			document.main.from.disabled = false;
+			document.main.from.focus();
+			//document.getElementById('history').innerHTML = 'Fill the Source Warehouse!';
+			return false;
+		}
+		else if (!toOK) {
+			document.main.to.disabled = false;
+			document.main.to.focus();
+			//document.getElementById('history').innerHTML = 'Fill the Destination Warehouse!';
+			return false;
+			
+		}	
+		else if (!typeOK) {
+			document.main.type.disabled = false;
+			document.main.type.focus();
+			//document.getElementById('history').innerHTML = 'Fill the Transfer Type!';
+			return false;
+		}
+		else {
+			return true;
+		}
+}
+
+	function send() {
+		
+	var product = 	document.getElementById('product').value;
+	var quantity = 	document.getElementById('quantity').value;
+	var from = 		document.getElementById('from').value;
+	var to = 		document.getElementById('to').value;
+	var type = 		document.getElementById('type').value;
+	
+	var actualTime = getActualTime();
+	var object = {
+			 "product": product, 
+			 "quantity": quantity, 
+			 "from": from, 
+			 "to": to, 
+			 "type": type,
+			 "date": actualTime
+	};
+	
+	var name = getName();
+	var strFromObj = JSON.stringify(object, null, '   ');		//object zmieniam na stringa
+	localStorage.setItem(name, strFromObj); 					//storuje w przegladarce
+	
+	showHistory();
+	document.getElementById('message').innerHTML = '';
+	undefinedTransfer();
+
+	if (defaultUser == true) {
+		setDefault( json.defaults.product, 
+					json.defaults.quantity, 
+					json.defaults.from, 
+					json.defaults.to, 
+					json.defaults.type  );
+	}
+	
+	
+	/*
+	function toStringAll(){
+		var str;
+		for	(var i=0, keys=localStorage.length; i<keys; ++i){
+			var key = localStorage.key(i);
+			str += showInfo(key) + '\n';
+		}
+		document.write(str);
+		return str;
+	}
+	
+	function showLocalStorage() {
+		for	(var i=0, keys = localStorage.length; i < keys; ++i){
+			var key = localStorage.key(i);
+			alert(key + ' = ' + localStorage.getItem(key));
+		}
+	}
+	
+	*/
+	
+	function getActualTime(){
+		var current = new Date();
+		var seconds = current.getSeconds();
+		var minutes = current.getMinutes();
+		var hour = current.getHours();
+		var date = (hour.toString() + ':' + minutes.toString() + ':' + seconds.toString() + ' ');
+		return date;
+	}
+
+
+} //send
+
+	function showLocalStorage() {
+		for	(var i=0, keys = localStorage.length; i < keys; ++i){
+			var key = localStorage.key(i);
+			alert(key + ' = ' + localStorage.getItem(key));
+		}
+	}
+
+	
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	function product_validation(element){
+		var ok = true;
+		var product = document.getElementById('product').value;
+		if (ok == true && product == null || product == "") {
+			ok = false; 
+			document.getElementById('message').innerHTML = 'Product Error! Field is Empty!';
+		}
+		else if (ok == true && hasProduct(product) == false) {
+			ok = false;
+			element.value = "";
+			document.getElementById('message').innerHTML = 'Product Error! No such product in database';
+		}
+
+		if (ok == true) {
+			productOK = true;
+			element.disabled = true;
+			var check = allOK();
+			if (check) send();
+		}
+    };
+		
+	function quantity_validation(element){
+		var ok = true;
+		var quantity = document.getElementById('quantity').value;
+		if (ok == true && quantity == null || quantity == "") {
+			ok = false; 
+			document.getElementById('message').innerHTML = 'Quantity Error! Field is Empty!';
+		}
+		
+		if (ok == true) {
+			quantityOK = true;
+			element.disabled = true;
+			var check = allOK();
+			if (check) send();
+		}
+	}
+
+	function from_validation(element){
+		var ok = true;
+		var from = document.getElementById('from').value;
+		if (ok == true && from == null || from == "") {
+			ok = false; 
+			document.getElementById('message').innerHTML = 'Source warehouse Error! Field is Empty!';
+		}
+		else if (ok == true && hasWarehouse(from) == false) {
+			ok = false;
+			element.value = "";
+			document.getElementById('message').innerHTML = 'Source warehouse Error! No such warehouse in database';
+		}
+		if (ok == true) {
+			fromOK = true;
+			element.disabled = true;
+			var check = allOK();
+			if (check) send();
+		}
+	}
+
+	function to_validation(element){
+		var ok = true;
+		var to = document.getElementById('to').value;
+		if (ok == true && to == null || to == "") {
+			ok = false; 
+			document.getElementById('message').innerHTML = 'Destination warehouse Error! Field is Empty!';
+		}
+		else if (ok == true && hasWarehouse(to) == false) {
+			ok = false;
+			element.value = "";
+			document.getElementById('message').innerHTML = 'Source warehouse Error! No such warehouse in database';
+		}
+		if (ok == true) {
+			toOK = true;
+			element.disabled = true;
+			var check = allOK();
+			if (check) send();
+		}
+	}
+
+	function type_validation(element){
+		var ok = true;
+		var type = document.getElementById('type').value;
+		if (ok == true && type == null || type == "") {
+			ok = false; 
+			document.getElementById('message').innerHTML = 'Transfer type Error! Field is Empty!';
+		}
+		else if (ok == true && hasTransferType(type) == false) {
+			ok = false;
+			element.value = "";
+			document.getElementById('message').innerHTML = 'Transfer type Error! No such transfer type in database';
+		}
+		if (ok == true) {
+			typeOK = true;
+			element.disabled = true;
+			var check = allOK();
+			if (check) send();
+		}
+	}
+
+	function showHistory(){
+		var txt = 'Transfer history from all day: </br>';
+		for (var i=getActualTransferNumber(), j=0; i>0 && j<10;  i--, j++) {
+			var key = 'transfer(' + i.toString() + ')';
+			txt += showInfo(key) + '</br>';
+		}
+		txt += '-------------------------------------</br>';
+		document.getElementById('history').innerHTML = txt;
+	}
+	
+	function showInfo(key){
+		var obj = JSON.parse(localStorage.getItem(key));
+		return (obj.date + ' - ' + obj.quantity + ' ' + findProductName(obj.product) + 
+				' transfer from: ' + findWarehouseName(obj.from) + ' to: ' + findWarehouseName(obj.to) );
+	}
+	
+	function findProductName(name) { return json.products[name].name; }
+	function findWarehouseName(name) { return json.warehouses[name].name; }
+	
+	function removeAll() {
+		for (var i=getActualTransferNumber(); i>0; i--) {
+			var key = 'transfer(' + i.toString() + ')';
+			window.localStorage.removeItem(key);
+		}
+		window.localStorage.removeItem('actualTransferNumber');
+		window.localStorage.removeItem('startTransferNumber');
+		showLocalStorage();
+		document.getElementById('message').innerHTML = 'All transfers has been removed!';
+	}
+		
+	function undefinedTransfer() {
+		document.main.product.disabled = false;
+		document.main.quantity.disabled = false;
+		document.main.from.disabled = false;
+		document.main.to.disabled = false;
+		document.main.type.disabled = false;
+		document.main.product.value = '';
+		document.main.quantity.value = '';
+		document.main.from.value = '';
+		document.main.to.value = '';
+		document.main.type.value = '';
+		document.main.product.focus();
+		productOK = false;
+		quantityOK = false;
+		fromOK = false;
+		toOK = false;
+		typeOK = false;
+	}
+
+	function setDefault(product, quantity, from, to, type){	
+		if (product != null && product != ""){
+			document.main.product.value = product;
+			document.main.product.disabled = true;
+			productOK = true;
+		}
+		else {
+			document.main.product.disabled = false;
+			document.main.product.value = '';
+			productOK = false;
+		}
+		if (quantity != null && quantity != ""){
+			document.main.quantity.value = quantity;
+			document.main.quantity.disabled = true;
+			quantityOK = true;
+		}
+		else {
+			document.main.quantity.disabled = false;
+			document.main.quantity.value = '';
+			quantityOK = false;
+		}
+		if (from != null && from != ""){
+			document.main.from.value = from;
+			document.main.from.disabled = true;
+			fromOK = true;
+		}
+		else {
+			document.main.from.disabled = false;
+			document.main.from.value = '';
+			fromOK = false;
+		}
+		if (to != null && to != ""){
+			document.main.to.value = to;
+			document.main.to.disabled = true;
+			toOK = true;
+		}
+		else {
+			document.main.to.disabled = false;
+			document.main.to.value = '';
+			toOK = false;
+		}
+		if (type != null && type != ""){
+			document.main.type.value = type;
+			document.main.type.disabled = true;
+			typeOK = true;
+		}
+		else {
+			document.main.type.disabled = false;
+			document.main.type.value = '';
+			typeOK = false;
+		}
+		allOK();
+	}	
+
+	function getDefinedTransfer(){
+		if (defaultUser == false){
+			defaultUser = true;
+			setDefault( json.defaults.product, 
+						json.defaults.quantity, 
+						json.defaults.from, 
+						json.defaults.to, 
+						json.defaults.type  );
+		}
+		else {
+			defaultUser = false;
+			undefinedTransfer();
+		}
+	}
+	
+	function clearStrg() {
+		window.localStorage.clear();
+		document.getElementById('message').innerHTML = 'All datastorage has been removed!';
+	}
+</script>
+
+
+
+<body>
+	<form onsubmit="return false">
+		<!--<input id="all_history"	type="button" value="Show All History" onclick="showHistory()" />-->
+		<input id="upload" name="upload" type="button" value="Upload Data" onclick="upload_data()" />
+		<input id="undefTransfer" type="button" value="Undefined Transfer" onclick="undefinedTransfer()" />
+		<input id="definedTransfer" type="button" value="Load Defaults" onclick="getDefinedTransfer()" />
+		<!--<input id="del" type="button" value="Delete All" onclick="removeAll()" />-->
+	</form>
+	
+	<div id="history_text"> HISTORY </div>
+	<table width="100%">
+		<tr>
+			<td>
+				<div id="history">
+				</div>
+			</td>
+		</tr>
+	<table>
+	
+	<div id="message"></div>
+	
+	<form action="" method="post" name="main">
+		</br>Product: </br>
+		<input id="product" 	tabindex="1" type="text"  value="" 	onkeydown="if (event.keyCode == 13) product_validation(this)" />
+		</br>Quantity: </br>
+		<input id="quantity" 	tabindex="2" type="text"  value="" 	onkeydown="if (event.keyCode == 13) quantity_validation(this)" />
+		</br>From: </br>
+		<input id="from" 		tabindex="3" type="text"  value="" 	onkeydown="if (event.keyCode == 13) from_validation(this)" />
+		</br>To: </br>
+		<input id="to" 			tabindex="4" type="text"  value="" 	onkeydown="if (event.keyCode == 13) to_validation(this)" />
+		</br>Type: </br>
+		<input id="type" 		tabindex="5" type="text"  value="" 	onkeydown="if (event.keyCode == 13) type_validation(this)" />
+	</form>
+		
+		
+</body>
+</html>

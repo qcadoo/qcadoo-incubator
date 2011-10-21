@@ -1,0 +1,15 @@
+body {
+	font-family: "Arial";
+	background: #C8C8C8;
+	font-size : medium;
+}
+
+#history {
+	max-width: 460px;
+	height: 130px; 
+	overflow: auto; 
+}
+
+#history_text {
+	font-size: 150%;
+}

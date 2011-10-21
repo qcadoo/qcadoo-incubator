@@ -1,0 +1,214 @@
+<html>
+<head><title>Uploading...</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<script type="text/javascript" src="json_parser.js"></script>
+
+<script>
+ok = false;
+
+	function removeAll() {
+		for (var i=getActualTransferNumber(); i>0; i--) {
+			var key = 'transfer(' + i.toString() + ')';
+			window.localStorage.removeItem(key);
+		}
+		window.localStorage.removeItem('actualTransferNumber');
+		showLocalStorage();
+		document.getElementById('message').innerHTML = 'All transfers has been removed!';
+	}
+
+function handleIframe(product, quantity, from, to, type){
+	var iframe = document.createElement('iframe');
+	iframe.setAttribute('id','ifr');
+	//mo¿emy go ukryæ od razu
+	iframe.style.display = 'none';
+	document.body.appendChild(iframe);
+    //pobieramy document
+    var doc = iframe.contentWindow || iframe.contentDocument;
+    if(doc.document){
+        doc = doc.document;
+    }
+    //tworzymy formularz w iframe-ie
+    var form = doc.createElement('form');
+    form.method = 'post';
+    form.action = 'http://student.agh.edu.pl/~miwojc/upload.php';
+    form.setAttribute('enctype','multipart/form-data');
+	
+
+	//tworzymy input-a na dane
+    var input = doc.createElement('input');
+    input.type = 'text';
+    input.name = 'product';
+    input.value = product;
+    form.appendChild(input);
+	var input = doc.createElement('input');
+    input.type = 'text';
+    input.name = 'quantity';
+    input.value = quantity;
+    form.appendChild(input);
+    var input = doc.createElement('input');
+    input.type = 'text';
+    input.name = 'from';
+    input.value = from;
+    form.appendChild(input);
+	var input = doc.createElement('input');
+    input.type = 'text';
+    input.name = 'to';
+    input.value = to;
+    form.appendChild(input);
+	var input = doc.createElement('input');
+    input.type = 'text';
+    input.name = 'type';
+    input.value = type;
+    form.appendChild(input);
+	
+	//dodajemy formularz do iframe-a
+    doc.body.appendChild(form);
+    //tworzymy funkcje do obslugi przeladowania iframe-a
+    var iframeLoad = function(){
+        //wyciagamy obsluge zdazenia z akutalnego watku zeby np. Firefox nie pokazywal statusu ladowania
+        setTimeout(function(){
+             //cos robimy po przeladowaniu np. usuwamy iframe
+			 //alert('something');
+        },1)
+    }
+    //podpinamy handler do iframe-a
+    iframe.onload = function(){
+         iframeLoaded();
+    };
+    //podpinamy dla explorera
+    iframe.onreadystatechange = function(){
+        if(this.readyState === 'complete'){
+			alert('chuj');
+			//window.parent.closeIframe();
+             iframeLoaded();
+        }
+    }
+	
+	/*
+	function closeIframe() [
+		var ifr = document.getElementByName('ifr');
+		iframe.parentNode.removeChild(ifr);
+	}
+	*/
+
+    //wysylamy formularz
+    form.submit();
+}
+	
+	function getActualTransferNumber()	{ 
+		if (localStorage.getItem('actualTransferNumber') == null || localStorage.getItem('actualTransferNumber') == '0') {
+			setActualTransferNumber(1);
+			return 1;
+		}
+		else return parseInt(localStorage.getItem('actualTransferNumber')); 	
+	}
+	function setActualTransferNumber(n)	{ 
+		if (localStorage.getItem('actualTransferNumber') == null) {
+			localStorage.setItem('actualTransferNumber', '1');
+		}
+		else {
+			localStorage.setItem('actualTransferNumber', n.toString());
+		}
+	}
+	function getStartTransferNumber()	{ 
+		if (localStorage.getItem('startTransferNumber') == null || localStorage.getItem('startTransferNumber') == '0') {
+			setStartTransferNumber(1);
+			return 1;
+		}
+		else return parseInt(localStorage.getItem('startTransferNumber')); 	
+	}
+	function setStartTransferNumber(n)	{ 
+		if (localStorage.getItem('startTransferNumber') == null) {
+			localStorage.setItem('startTransferNumber', '1');
+		}
+		else {
+			localStorage.setItem('startTransferNumber', n.toString());
+		}
+	}
+
+	function send_next_entry(){
+		//ok = false;
+		//usuwanie ostatnio przetworzonego:
+		var nr = getStartTransferNumber();
+		var toBeDeleted = 'transfer(' + nr.toString() + ')';
+		if (toBeDeleted != 'transfer(0)') window.localStorage.removeItem(toBeDeleted);
+		var actualNr = getActualTransferNumber();
+		
+		if (nr >= actualNr) { //wszystkie wpisy zostaly zuploadowane
+			//poinformuj uzytkownika, ustaw Actual/StartNumber na 1, zakoncz upload
+			window.localStorage.removeItem('actualTransferNumber');
+			window.localStorage.removeItem('startTransferNumber');
+			document.getElementById('message').innerHTML = 'All data has been uploaded!';
+			return;
+		}
+		else {	//jeszcze nie wszystkie wpisy zuploadowane
+			//startnumber++, zaladuj nastepny
+			setStartTransferNumber(++nr);
+			var key = 'transfer(' + nr.toString() + ')';
+			
+			if (localStorage.getItem(key) != null && localStorage.getItem(key) != "") {
+				//wyswietlenie wiadomosci o aktualnym transferze:
+				var transfersLeft = actualNr - nr;
+				var txt = 'Sending: ' + key + ', transfers left: ' + transfersLeft;
+				//alert(txt);
+				document.getElementById('message').innerHTML = txt;
+				//wyslanie kolejnego transferu
+				var obj = JSON.parse(localStorage.getItem(key));
+				handleIframe(obj.product, obj.quantity, obj.from, obj.to, obj.type, obj.date);
+				//send_next_entry();
+			}
+		}
+	}
+	
+	function new_upload_data(){
+		var key = 'transfer(' + getStartTransferNumber().toString() + ')';
+		var obj = JSON.parse(localStorage.getItem(key));
+		handleIframe(obj.product, obj.quantity, obj.from, obj.to, obj.type, obj.date);
+		send_next_entry();
+		//alert('koniec');
+	}
+	
+	function wrong(){
+		document.getElementById('message').innerHTML = "Press back and then Upload again.";
+	}
+	
+	
+/*
+function upload_data(){
+	var max = getActualTransferNumber() + 1;
+	if (max == 1) document.getElementById('message').innerHTML = 'Fatal Error!';
+	else {
+		for (var i=1; i<max; i++) {
+			var key = 'transfer(' + i.toString() + ')';
+			var obj = JSON.parse(localStorage.getItem(key));
+			var number = max-i-1;
+			var txt = ('Actual ' + key + ', ' + number + ' transfers left');
+			document.getElementById('message').innerHTML = txt;
+			handleIframe(obj.product, obj.quantity, obj.from, obj.to, obj.type, obj.date);
+		}
+	}
+	removeAll();
+}
+*/
+
+	function returnToCollector(){
+		window.location.href="barcode.html";
+	}
+	
+	function wypisz(){
+		alert('wypisz');
+	}
+
+</script>
+
+<body onload="new_upload_data()">
+
+	<div id="message"></div>
+	<form onsubmit="return false">
+		<!--<input id="send" type="button" value="Send" onclick="new_upload_data()" />-->
+		<input id="done" type="button" value="BACK" onclick="returnToCollector()" />
+	</form>
+</body>
+</html>
