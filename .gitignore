@@ -1,0 +1,10 @@
+.classpath
+.project
+.settings
+.DS_Store
+.pmd
+target
+bin
+pom.xml.releaseBackup
+pom.xml.next
+release.properties
