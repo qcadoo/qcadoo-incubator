@@ -1,0 +1,1459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session xmlns="http://www.soneta.pl/schema/business">
+	<DefDokHandlowego id="DefDokHandlowego_61" guid="00000000-0011-0002-001e-000000000000">
+    <Bazowa>00000000-0000-0000-0000-000000000000</Bazowa>
+    <Symbol>ZO</Symbol>
+    <DrugiSymbol />
+    <Nazwa>Zamówienie od odbiorcy</Nazwa>
+    <Blokada>False</Blokada>
+    <TytulWydruku>Zamówienie od odbiorcy</TytulWydruku>
+    <TytulWydruku2 />
+    <OpisWydruku />
+    <PokazParametryWydruku>NiePokazuj</PokazParametryWydruku>
+    <IloscKopii>1</IloscKopii>
+    <DrukowanieZawszeOryginal>False</DrukowanieZawszeOryginal>
+    <DrukowanieNumerowNadrzednych>False</DrukowanieNumerowNadrzednych>
+    <DrukowanieNumerowNadrzednychTylkoNajblizsze>False</DrukowanieNumerowNadrzednychTylkoNajblizsze>
+    <DrukowanieNumerowPodrzednych>False</DrukowanieNumerowPodrzednych>
+    <InformacjeKRS>True</InformacjeKRS>
+    <DrukowanieCenyIRabatu>True</DrukowanieCenyIRabatu>
+    <DrukujDrugiRachunek>False</DrukujDrugiRachunek>
+    <DrukujTylkoRoznicePrzedKorekta>False</DrukujTylkoRoznicePrzedKorekta>
+    <DrukujTylkoRoznicePoKorekcie>False</DrukujTylkoRoznicePoKorekcie>
+    <DrukujSWIFTZawsze>False</DrukujSWIFTZawsze>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/Seria/*:6/Data.Year:2</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <SeriaOperatora>False</SeriaOperatora>
+    <SlownikSerii>False</SlownikSerii>o
+    <PostfixSerii />
+    <WartosciTylkoZeSlownika>False</WartosciTylkoZeSlownika>
+    <DefNaglowek1Xml />
+    <DefNaglowek2Xml />
+    <DefPodsumowanieXml />
+    <Kategoria>ZamówienieOdbiorcy</Kategoria>
+    <Wewnetrzny>False</Wewnetrzny>
+    <Anulowany>True</Anulowany>
+    <Kasowany>True</Kasowany>
+    <NazwaDaty />
+    <NazwaDatyOperacji />
+    <DuplikatWartosci>False</DuplikatWartosci>
+    <Buforowanie>PrzenoszonyDoBufora</Buforowanie>
+    <CyklFakturowaniaUmowy>Brak</CyklFakturowaniaUmowy>
+    <RodzajUmowy>NieDotyczy</RodzajUmowy>
+    <CyklFakturowaniaSposobNaDniWolne>None</CyklFakturowaniaSposobNaDniWolne>
+    <Umowa>NieDotyczy</Umowa>
+    <KontrahentWymagany>Wymagany</KontrahentWymagany>
+    <FiltrKontrahenta />
+    <TypFiltruKontrahenta>Razem</TypFiltruKontrahenta>
+    <FiltrKontrahentaStosowanie>Ignoruj</FiltrKontrahentaStosowanie>
+    <DozwolonyIncydentalny>True</DozwolonyIncydentalny>
+    <WyborTowaru>ZKartotekiLubWskazanie</WyborTowaru>
+    <FiltrStanuTowaru>Dowolny</FiltrStanuTowaru>
+    <FiltrTowaru />
+    <TowarWgDostawcy>False</TowarWgDostawcy>
+    <TypFiltruTowaru>Razem</TypFiltruTowaru>
+    <IloscTowaruKopiowana>Dowolna</IloscTowaruKopiowana>
+    <JestWalutaKontrahenta>True</JestWalutaKontrahenta>
+    <KopiujCechyDostawy>False</KopiujCechyDostawy>
+    <BlokadaEdycjiDaty>False</BlokadaEdycjiDaty>
+    <BlokadaEdycjiMagazynu>False</BlokadaEdycjiMagazynu>
+    <BlokadaEdycjiDatyOperacji>False</BlokadaEdycjiDatyOperacji>
+    <BlokadaEdycjiDatyOtrzymania>False</BlokadaEdycjiDatyOtrzymania>
+    <NieWymagajCech>False</NieWymagajCech>
+    <CechyWymagane />
+    <UwzglednijWGeneratorzeZamowien>True</UwzglednijWGeneratorzeZamowien>
+    <Dodawanie>Dodawany</Dodawanie>
+    <Klawisz />
+    <KreatorDokumentu>
+      <JestWlaczony>False</JestWlaczony>
+      <DomyslnaPodlistaTowaru>Brak</DomyslnaPodlistaTowaru>
+    </KreatorDokumentu>
+    <TylkoPodglad>False</TylkoPodglad>
+    <Naglowek>Prosty Obcy</Naglowek>
+    <Naglowek2>Dostawa</Naglowek2>
+    <Podsumowanie>Netto Rabat Wartość</Podsumowanie>
+    <OkrDostawcaOdbiorca>Odbiorca</OkrDostawcaOdbiorca>
+    <PokazKomunikat>True</PokazKomunikat>
+    <ZmianaWartosciPozycji>PrzeliczyćRabat</ZmianaWartosciPozycji>
+    <CenaPoRabacieLiczonaOdWartosci>False</CenaPoRabacieLiczonaOdWartosci>
+    <BlokadaCeny>False</BlokadaCeny>
+    <PozwalajWartosc0>True</PozwalajWartosc0>
+    <SprzedazPonizejCenyMinimalnej>WgSimpleRight</SprzedazPonizejCenyMinimalnej>
+    <PozwalajIlosc0>False</PozwalajIlosc0>
+    <NiezgodnoscWartosci>False</NiezgodnoscWartosci>
+    <JednostkaAlternatywna>False</JednostkaAlternatywna>
+    <AktualizujCeny>Brak</AktualizujCeny>
+    <PoleSortowania />
+    <EdycjaStawkiVAT>False</EdycjaStawkiVAT>
+    <Fiskalizowany>False</Fiskalizowany>
+    <SumyVAT>Liczyć</SumyVAT>
+    <WyborStawkiVAT>SprzedażyLubZero</WyborStawkiVAT>
+    <WyborStawkiVATWgDaty>Dokument</WyborStawkiVATWgDaty>
+    <KasaZbiorcza>False</KasaZbiorcza>
+    <WalutaPlatnosci>00000000-0004-0001-0001-000000000000</WalutaPlatnosci>
+    <KierunekPlatnosci>Brak</KierunekPlatnosci>
+    <KierunekZaliczki>Przychod</KierunekZaliczki>
+    <SposobPrzenoszeniaZaliczki>NieDotyczy</SposobPrzenoszeniaZaliczki>
+    <EdycjaWartosci>SprawdzajKwotęPLN</EdycjaWartosci>
+    <DataKursu>Data</DataKursu>
+    <DefinicjaEwidencjiZrodlo>Default</DefinicjaEwidencjiZrodlo>
+    <DefinicjaEwidencji />
+    <DefinicjaEwidencjiCecha />
+    <SposobZaplaty />
+    <PlanSplat>False</PlanSplat>
+    <PlatnoscKaucji>False</PlatnoscKaucji>
+    <ZablokujEdycjeKursu>False</ZablokujEdycjeKursu>
+    <PozwalajWielowalutowy>False</PozwalajWielowalutowy>
+    <KursWgDaty>Obowiązywania</KursWgDaty>
+    <Intrastat>NieUwzględniaj</Intrastat>
+    <RodzajTransakcji>Brak</RodzajTransakcji>
+    <WarunkiDostawy>Brak</WarunkiDostawy>
+    <RodzajTransportu>Brak</RodzajTransportu>
+    <KierunekMagazynu>Rozchód</KierunekMagazynu>
+    <TypPartiiMagazynowej>ZamówionyZasób</TypPartiiMagazynowej>
+    <MomentMagazynu>PodczasZatwierdzania</MomentMagazynu>
+    <ZmianaMarzy>Dozwolona</ZmianaMarzy>
+    <RezerwowacTowar>False</RezerwowacTowar>
+    <MinimumMarzy>False</MinimumMarzy>
+    <UstawieniaWskazaniePartii>
+      <DoZamowien>False</DoZamowien>
+      <ZasobyPodrzedne>False</ZasobyPodrzedne>
+      <Flags>None</Flags>
+    </UstawieniaWskazaniePartii>
+    <PozwalajMagazynBezPraw>False</PozwalajMagazynBezPraw>
+    <WeryfikujRezerwacje>False</WeryfikujRezerwacje>
+    <WidoczneCechy />
+    <WydrukDomyslny>False</WydrukDomyslny>
+    <Cena>ccbff5aa-18e1-45e2-b46e-88fa4ae14f8f</Cena>
+    <CenaKosztuUsługi />
+    <LiczonaOd>OdNetto</LiczonaOd>
+    <PrecyzjaCeny>
+      <Wymuszaj>False</Wymuszaj>
+      <Precyzja>2</Precyzja>
+    </PrecyzjaCeny>
+    <EwidencjaZKorekty>False</EwidencjaZKorekty>
+    <NazwaTowaru>NazwaIOpis</NazwaTowaru>
+    <JestKWPZ>False</JestKWPZ>
+    <SposobRozliczaniaNadrzednego>Brak</SposobRozliczaniaNadrzednego>
+    <SposobEdycjiKompletacji>None</SposobEdycjiKompletacji>
+    <Flags>None</Flags>
+    <bi_disabled>False</bi_disabled>
+    <KontrolerRelacjiInfo>
+      <Disabled>False</Disabled>
+      <PrzeliczajPozycjeRelacji>False</PrzeliczajPozycjeRelacji>
+    </KontrolerRelacjiInfo>
+  </DefDokHandlowego>
+  <Jednostka id="Jednostka_10" guid="00000000-0011-0007-0007-000000000000">
+    <Kod>para</Kod>
+    <Opis>para - jednostka ilości</Opis>
+    <Precyzja>0</Precyzja>
+    <Typ>Ilość</Typ>
+    <Blokada>False</Blokada>
+    <Uzupelniajaca>True</Uzupelniajaca>
+    <Przeliczniki />
+  </Jednostka>
+  <Towar id="Towar_2" guid="97e7f69a-a1dc-45e1-8d3b-31082c3da1d4">
+    <Kod>BUT_NAR_42</Kod>
+    <Typ>Towar</Typ>
+    <Opakowanie>False</Opakowanie>
+    <Nazwa>Buty do nart Classic 42</Nazwa>
+    <EAN>2000000000978</EAN>
+    <NumerKatalogowy />
+    <Jednostka>00000000-0011-0007-0007-000000000000</Jednostka>
+    <DefinicjaStawki>00000000-0001-0003-0010-000000000000</DefinicjaStawki>
+    <DefinicjaStawkiZakupu>00000000-0001-0003-0010-000000000000</DefinicjaStawkiZakupu>
+    <SWW />
+    <Narzut>10.00%</Narzut>
+    <Marza>19.00%</Marza>
+    <CenaZakupuKartotekowa>0.00 PLN</CenaZakupuKartotekowa>
+    <KodCN>64021210</KodCN>
+    <JednostkaUzupelniajaca>Jednostka_10</JednostkaUzupelniajaca>
+    <NazwaIntrastat />
+    <KosztDodatkowy>False</KosztDodatkowy>
+    <AktualizujCeny>Zawsze</AktualizujCeny>
+    <Blokada>False</Blokada>
+    <Precyzja>2</Precyzja>
+    <VATOdMarzy>False</VATOdMarzy>
+    <DefinicjaPowstaniaObowiazkuVATInfo>
+      <Sprzedaz />
+    </DefinicjaPowstaniaObowiazkuVATInfo>
+    <DoWyprzedazy>False</DoWyprzedazy>
+    <WyborPartii>True</WyborPartii>
+    <EdycjaNazwy>False</EdycjaNazwy>
+    <Opis />
+    <MasaNetto>1 kg</MasaNetto>
+    <MasaBrutto>0</MasaBrutto>
+    <JednostkaAlternatywna />
+    <JednostkaReszty />
+    <PrefiksGTIN13 />
+    <Dostawca />
+    <ZaokraglenieZamowienia>0</ZaokraglenieZamowienia>
+    <StanMinimalny>0</StanMinimalny>
+    <StanMaksymalny>0</StanMaksymalny>
+    <PelneKomplety>False</PelneKomplety>
+    <ProduktInfo>
+      <CenaIndywidualna>False</CenaIndywidualna>
+      <CenaEwidencyjna />
+    </ProduktInfo>
+    <MinimalnaMarza>0</MinimalnaMarza>
+    <Link />
+    <AlternatywneDefinicjeStawekInfo>
+      <Sprzedaz />
+      <Zakup />
+      <PowodZmianyStawkiVat>None</PowodZmianyStawkiVat>
+    </AlternatywneDefinicjeStawekInfo>
+    <KodyKreskowe>
+      <KodKreskowy id="KodKreskowy_2">
+        <Zapis>Towar_2</Zapis>
+        <Kod>2000000000978</Kod>
+        <Jednostka>Jednostka_10</Jednostka>
+        <TypKodu>KodKreskowy</TypKodu>
+      </KodKreskowy>
+    </KodyKreskowe>
+    <PrzelicznikiTowaru />
+    <ZamiennikiTowaru />
+    <SchematyTowary />
+    <ElementyKompletu />
+    <Ceny>
+      <Cena id="Cena_4">
+        <Towar>Towar_2</Towar>
+        <Definicja>8942bfde-39ad-43ca-949a-e23949b0a56e</Definicja>
+        <Netto>200.00 PLN</Netto>
+        <Brutto>244.00 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>True</Korygowana>
+      </Cena>
+      <Cena id="Cena_5">
+        <Towar>Towar_2</Towar>
+        <Definicja>ccbff5aa-18e1-45e2-b46e-88fa4ae14f8f</Definicja>
+        <Netto>220.00 PLN</Netto>
+        <Brutto>268.40 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>False</Korygowana>
+      </Cena>
+      <Cena id="Cena_6">
+        <Towar>Towar_2</Towar>
+        <Definicja>e3b12ca1-3f8a-481d-b349-fd7f3e8d1d8b</Definicja>
+        <Netto>271.60 PLN</Netto>
+        <Brutto>331.35 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>False</Korygowana>
+      </Cena>
+    </Ceny>
+    <CenyIndywidualne />
+  </Towar>
+  <Towar id="Towar_5" guid="fa0ec7f5-3ec8-4182-aecb-fc3938c9dbb0">
+    <Kod>BUT_NAR_43</Kod>
+    <Typ>Towar</Typ>
+    <Opakowanie>False</Opakowanie>
+    <Nazwa>Buty do nart Normal 43</Nazwa>
+    <EAN>2000000000916</EAN>
+    <NumerKatalogowy />
+    <Jednostka>Jednostka_10</Jednostka>
+    <DefinicjaStawki>00000000-0001-0003-0010-000000000000</DefinicjaStawki>
+    <DefinicjaStawkiZakupu>00000000-0001-0003-0010-000000000000</DefinicjaStawkiZakupu>
+    <SWW />
+    <Narzut>10.00%</Narzut>
+    <Marza>19.00%</Marza>
+    <CenaZakupuKartotekowa>0.00 PLN</CenaZakupuKartotekowa>
+    <KodCN>64021210</KodCN>
+    <JednostkaUzupelniajaca>Jednostka_10</JednostkaUzupelniajaca>
+    <NazwaIntrastat />
+    <KosztDodatkowy>False</KosztDodatkowy>
+    <AktualizujCeny>Zawsze</AktualizujCeny>
+    <Blokada>False</Blokada>
+    <Precyzja>2</Precyzja>
+    <VATOdMarzy>False</VATOdMarzy>
+    <DefinicjaPowstaniaObowiazkuVATInfo>
+      <Sprzedaz />
+    </DefinicjaPowstaniaObowiazkuVATInfo>
+    <DoWyprzedazy>False</DoWyprzedazy>
+    <WyborPartii>True</WyborPartii>
+    <EdycjaNazwy>False</EdycjaNazwy>
+    <Opis />
+    <MasaNetto>1 kg</MasaNetto>
+    <MasaBrutto>0</MasaBrutto>
+    <JednostkaAlternatywna />
+    <JednostkaReszty />
+    <PrefiksGTIN13 />
+    <Dostawca />
+    <ZaokraglenieZamowienia>0</ZaokraglenieZamowienia>
+    <StanMinimalny>0</StanMinimalny>
+    <StanMaksymalny>0</StanMaksymalny>
+    <PelneKomplety>False</PelneKomplety>
+    <ProduktInfo>
+      <CenaIndywidualna>False</CenaIndywidualna>
+      <CenaEwidencyjna />
+    </ProduktInfo>
+    <MinimalnaMarza>0</MinimalnaMarza>
+    <Link />
+    <AlternatywneDefinicjeStawekInfo>
+      <Sprzedaz />
+      <Zakup />
+      <PowodZmianyStawkiVat>None</PowodZmianyStawkiVat>
+    </AlternatywneDefinicjeStawekInfo>
+    <KodyKreskowe>
+      <KodKreskowy id="KodKreskowy_5">
+        <Zapis>Towar_5</Zapis>
+        <Kod>2000000000916</Kod>
+        <Jednostka>Jednostka_10</Jednostka>
+        <TypKodu>KodKreskowy</TypKodu>
+      </KodKreskowy>
+    </KodyKreskowe>
+    <PrzelicznikiTowaru />
+    <ZamiennikiTowaru />
+    <SchematyTowary />
+    <ElementyKompletu />
+    <Ceny>
+      <Cena id="Cena_13">
+        <Towar>Towar_5</Towar>
+        <Definicja>8942bfde-39ad-43ca-949a-e23949b0a56e</Definicja>
+        <Netto>200.00 PLN</Netto>
+        <Brutto>244.00 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>True</Korygowana>
+      </Cena>
+      <Cena id="Cena_14">
+        <Towar>Towar_5</Towar>
+        <Definicja>ccbff5aa-18e1-45e2-b46e-88fa4ae14f8f</Definicja>
+        <Netto>220.00 PLN</Netto>
+        <Brutto>268.40 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>False</Korygowana>
+      </Cena>
+      <Cena id="Cena_15">
+        <Towar>Towar_5</Towar>
+        <Definicja>e3b12ca1-3f8a-481d-b349-fd7f3e8d1d8b</Definicja>
+        <Netto>271.60 PLN</Netto>
+        <Brutto>331.35 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>False</Korygowana>
+      </Cena>
+    </Ceny>
+    <CenyIndywidualne />
+  </Towar>
+  <Towar id="Towar_1" guid="65336878-70cf-4e64-bd72-b742cd26a657">
+    <Kod>BIKINI</Kod>
+    <KodCN>61123110</KodCN>
+    <Nazwa>Bikini - Strój kąpielowy damski</Nazwa>
+    <NumerKatalogowy />
+    <EAN>2000000000954</EAN>
+    <PrefiksGTIN13 />
+    <Typ>Towar</Typ>
+    <Opakowanie>False</Opakowanie>
+    <Jednostka>Jednostka_10</Jednostka>
+    <DefinicjaStawki>00000000-0001-0003-0010-000000000000</DefinicjaStawki>
+    <DefinicjaStawkiZakupu>00000000-0001-0003-0010-000000000000</DefinicjaStawkiZakupu>
+    <SWW />
+    <Narzut>10.00%</Narzut>
+    <Marza>15.00%</Marza>
+    <CenaZakupuKartotekowa>0.00 PLN</CenaZakupuKartotekowa>
+    <JednostkaUzupelniajaca>Jednostka_10</JednostkaUzupelniajaca>
+    <NazwaIntrastat />
+    <KosztDodatkowy>False</KosztDodatkowy>
+    <AktualizujCeny>Zawsze</AktualizujCeny>
+    <Blokada>False</Blokada>
+    <Precyzja>2</Precyzja>
+    <VATOdMarzy>False</VATOdMarzy>
+    <DefinicjaPowstaniaObowiazkuVATInfo>
+      <Sprzedaz />
+    </DefinicjaPowstaniaObowiazkuVATInfo>
+    <DoWyprzedazy>False</DoWyprzedazy>
+    <WyborPartii>True</WyborPartii>
+    <EdycjaNazwy>False</EdycjaNazwy>
+    <Opis />
+    <MasaNetto>0.001 kg</MasaNetto>
+    <MasaBrutto>0</MasaBrutto>
+    <JednostkaAlternatywna />
+    <JednostkaReszty />
+    <Dostawca />
+    <ZaokraglenieZamowienia>0</ZaokraglenieZamowienia>
+    <StanMinimalny>0</StanMinimalny>
+    <StanMaksymalny>0</StanMaksymalny>
+    <PelneKomplety>False</PelneKomplety>
+    <ProduktInfo>
+      <CenaIndywidualna>False</CenaIndywidualna>
+      <CenaEwidencyjna />
+    </ProduktInfo>
+    <MinimalnaMarza>0</MinimalnaMarza>
+    <Link />
+    <AlternatywneDefinicjeStawekInfo>
+      <Sprzedaz />
+      <Zakup />
+      <PowodZmianyStawkiVat>None</PowodZmianyStawkiVat>
+    </AlternatywneDefinicjeStawekInfo>
+    <KodyKreskowe>
+      <KodKreskowy id="KodKreskowy_1">
+        <Zapis>Towar_1</Zapis>
+        <Kod>2000000000954</Kod>
+        <Jednostka>Jednostka_10</Jednostka>
+        <TypKodu>KodKreskowy</TypKodu>
+      </KodKreskowy>
+    </KodyKreskowe>
+    <PrzelicznikiTowaru />
+    <ZamiennikiTowaru />
+    <SchematyTowary />
+    <ElementyKompletu />
+    <Ceny>
+      <Cena id="Cena_1">
+        <Towar>Towar_1</Towar>
+        <Definicja>8942bfde-39ad-43ca-949a-e23949b0a56e</Definicja>
+        <Netto>40.00 PLN</Netto>
+        <Brutto>48.80 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>True</Korygowana>
+      </Cena>
+      <Cena id="Cena_2">
+        <Towar>Towar_1</Towar>
+        <Definicja>ccbff5aa-18e1-45e2-b46e-88fa4ae14f8f</Definicja>
+        <Netto>44.00 PLN</Netto>
+        <Brutto>54.12 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>False</Korygowana>
+      </Cena>
+      <Cena id="Cena_3">
+        <Towar>Towar_1</Towar>
+        <Definicja>e3b12ca1-3f8a-481d-b349-fd7f3e8d1d8b</Definicja>
+        <Netto>51.76 PLN</Netto>
+        <Brutto>63.66 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>False</Korygowana>
+      </Cena>
+    </Ceny>
+    <CenyIndywidualne />
+  </Towar>
+  <Towar id="Towar_3" guid="61e50151-9f26-4de3-85dc-5d0983f56956">
+    <Kod>BUT_NAR_45</Kod>
+    <KodCN>64021210</KodCN>
+    <Nazwa>Buty do nart Extreme 45</Nazwa>
+    <NumerKatalogowy />
+    <EAN>2000000000985</EAN>
+    <PrefiksGTIN13 />
+    <Typ>Towar</Typ>
+    <Opakowanie>False</Opakowanie>
+    <Jednostka>Jednostka_10</Jednostka>
+    <DefinicjaStawki>00000000-0001-0003-0010-000000000000</DefinicjaStawki>
+    <DefinicjaStawkiZakupu>00000000-0001-0003-0010-000000000000</DefinicjaStawkiZakupu>
+    <SWW />
+    <Narzut>10.00%</Narzut>
+    <Marza>19.00%</Marza>
+    <CenaZakupuKartotekowa>0.00 PLN</CenaZakupuKartotekowa>
+    <JednostkaUzupelniajaca>Jednostka_10</JednostkaUzupelniajaca>
+    <NazwaIntrastat />
+    <KosztDodatkowy>False</KosztDodatkowy>
+    <AktualizujCeny>Zawsze</AktualizujCeny>
+    <Blokada>False</Blokada>
+    <Precyzja>2</Precyzja>
+    <VATOdMarzy>False</VATOdMarzy>
+    <DefinicjaPowstaniaObowiazkuVATInfo>
+      <Sprzedaz />
+    </DefinicjaPowstaniaObowiazkuVATInfo>
+    <DoWyprzedazy>False</DoWyprzedazy>
+    <WyborPartii>True</WyborPartii>
+    <EdycjaNazwy>False</EdycjaNazwy>
+    <Opis />
+    <MasaNetto>1 kg</MasaNetto>
+    <MasaBrutto>0</MasaBrutto>
+    <JednostkaAlternatywna />
+    <JednostkaReszty />
+    <Dostawca />
+    <ZaokraglenieZamowienia>0</ZaokraglenieZamowienia>
+    <StanMinimalny>0</StanMinimalny>
+    <StanMaksymalny>0</StanMaksymalny>
+    <PelneKomplety>False</PelneKomplety>
+    <ProduktInfo>
+      <CenaIndywidualna>False</CenaIndywidualna>
+      <CenaEwidencyjna />
+    </ProduktInfo>
+    <MinimalnaMarza>0</MinimalnaMarza>
+    <Link />
+    <AlternatywneDefinicjeStawekInfo>
+      <Sprzedaz />
+      <Zakup />
+      <PowodZmianyStawkiVat>None</PowodZmianyStawkiVat>
+    </AlternatywneDefinicjeStawekInfo>
+    <KodyKreskowe>
+      <KodKreskowy id="KodKreskowy_3">
+        <Zapis>Towar_3</Zapis>
+        <Kod>2000000000985</Kod>
+        <Jednostka>Jednostka_10</Jednostka>
+        <TypKodu>KodKreskowy</TypKodu>
+      </KodKreskowy>
+    </KodyKreskowe>
+    <PrzelicznikiTowaru />
+    <ZamiennikiTowaru />
+    <SchematyTowary />
+    <ElementyKompletu />
+    <Ceny>
+      <Cena id="Cena_7">
+        <Towar>Towar_3</Towar>
+        <Definicja>8942bfde-39ad-43ca-949a-e23949b0a56e</Definicja>
+        <Netto>240.00 PLN</Netto>
+        <Brutto>292.80 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>True</Korygowana>
+      </Cena>
+      <Cena id="Cena_8">
+        <Towar>Towar_3</Towar>
+        <Definicja>ccbff5aa-18e1-45e2-b46e-88fa4ae14f8f</Definicja>
+        <Netto>264.00 PLN</Netto>
+        <Brutto>322.08 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>False</Korygowana>
+      </Cena>
+      <Cena id="Cena_9">
+        <Towar>Towar_3</Towar>
+        <Definicja>e3b12ca1-3f8a-481d-b349-fd7f3e8d1d8b</Definicja>
+        <Netto>325.93 PLN</Netto>
+        <Brutto>397.63 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>False</Korygowana>
+      </Cena>
+    </Ceny>
+    <CenyIndywidualne />
+  </Towar>
+  <Towar id="Towar_4" guid="4e668c2f-5cbc-4634-89f4-591677a031d4">
+    <Kod>BUT_NAR_44</Kod>
+    <KodCN>64021210</KodCN>
+    <Nazwa>Buty do nart Medium 44</Nazwa>
+    <NumerKatalogowy />
+    <EAN>2000000000992</EAN>
+    <PrefiksGTIN13 />
+    <Typ>Towar</Typ>
+    <Opakowanie>False</Opakowanie>
+    <Jednostka>Jednostka_10</Jednostka>
+    <DefinicjaStawki>00000000-0001-0003-0010-000000000000</DefinicjaStawki>
+    <DefinicjaStawkiZakupu>00000000-0001-0003-0010-000000000000</DefinicjaStawkiZakupu>
+    <SWW />
+    <Narzut>10.00%</Narzut>
+    <Marza>19.00%</Marza>
+    <CenaZakupuKartotekowa>0.00 PLN</CenaZakupuKartotekowa>
+    <JednostkaUzupelniajaca>Jednostka_10</JednostkaUzupelniajaca>
+    <NazwaIntrastat />
+    <KosztDodatkowy>False</KosztDodatkowy>
+    <AktualizujCeny>Zawsze</AktualizujCeny>
+    <Blokada>False</Blokada>
+    <Precyzja>2</Precyzja>
+    <VATOdMarzy>False</VATOdMarzy>
+    <DefinicjaPowstaniaObowiazkuVATInfo>
+      <Sprzedaz />
+    </DefinicjaPowstaniaObowiazkuVATInfo>
+    <DoWyprzedazy>False</DoWyprzedazy>
+    <WyborPartii>True</WyborPartii>
+    <EdycjaNazwy>False</EdycjaNazwy>
+    <Opis />
+    <MasaNetto>1 kg</MasaNetto>
+    <MasaBrutto>0</MasaBrutto>
+    <JednostkaAlternatywna />
+    <JednostkaReszty />
+    <Dostawca />
+    <ZaokraglenieZamowienia>0</ZaokraglenieZamowienia>
+    <StanMinimalny>0</StanMinimalny>
+    <StanMaksymalny>0</StanMaksymalny>
+    <PelneKomplety>False</PelneKomplety>
+    <ProduktInfo>
+      <CenaIndywidualna>False</CenaIndywidualna>
+      <CenaEwidencyjna />
+    </ProduktInfo>
+    <MinimalnaMarza>0</MinimalnaMarza>
+    <Link />
+    <AlternatywneDefinicjeStawekInfo>
+      <Sprzedaz />
+      <Zakup />
+      <PowodZmianyStawkiVat>None</PowodZmianyStawkiVat>
+    </AlternatywneDefinicjeStawekInfo>
+    <KodyKreskowe>
+      <KodKreskowy id="KodKreskowy_4">
+        <Zapis>Towar_4</Zapis>
+        <Kod>2000000000992</Kod>
+        <Jednostka>Jednostka_10</Jednostka>
+        <TypKodu>KodKreskowy</TypKodu>
+      </KodKreskowy>
+    </KodyKreskowe>
+    <PrzelicznikiTowaru />
+    <ZamiennikiTowaru />
+    <SchematyTowary />
+    <ElementyKompletu />
+    <Ceny>
+      <Cena id="Cena_10">
+        <Towar>Towar_4</Towar>
+        <Definicja>8942bfde-39ad-43ca-949a-e23949b0a56e</Definicja>
+        <Netto>220.00 PLN</Netto>
+        <Brutto>268.40 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>True</Korygowana>
+      </Cena>
+      <Cena id="Cena_11">
+        <Towar>Towar_4</Towar>
+        <Definicja>ccbff5aa-18e1-45e2-b46e-88fa4ae14f8f</Definicja>
+        <Netto>242.00 PLN</Netto>
+        <Brutto>295.24 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>False</Korygowana>
+      </Cena>
+      <Cena id="Cena_12">
+        <Towar>Towar_4</Towar>
+        <Definicja>e3b12ca1-3f8a-481d-b349-fd7f3e8d1d8b</Definicja>
+        <Netto>298.77 PLN</Netto>
+        <Brutto>364.50 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>False</Korygowana>
+      </Cena>
+    </Ceny>
+    <CenyIndywidualne />
+  </Towar>
+  <Towar id="Towar_13" guid="6f46293a-56a0-4c08-8f86-c823b338e07a">
+    <Kod>LYZ_FB_36</Kod>
+    <KodCN>95067010</KodCN>
+    <Nazwa>Łyżwy figurowe białe rozm. 36</Nazwa>
+    <NumerKatalogowy />
+    <EAN>2000000001067</EAN>
+    <PrefiksGTIN13 />
+    <Typ>Towar</Typ>
+    <Opakowanie>False</Opakowanie>
+    <Jednostka>Jednostka_10</Jednostka>
+    <DefinicjaStawki>00000000-0001-0003-0010-000000000000</DefinicjaStawki>
+    <DefinicjaStawkiZakupu>00000000-0001-0003-0010-000000000000</DefinicjaStawkiZakupu>
+    <SWW />
+    <Narzut>20.00%</Narzut>
+    <Marza>22.00%</Marza>
+    <CenaZakupuKartotekowa>0.00 PLN</CenaZakupuKartotekowa>
+    <JednostkaUzupelniajaca>Jednostka_10</JednostkaUzupelniajaca>
+    <NazwaIntrastat />
+    <KosztDodatkowy>False</KosztDodatkowy>
+    <AktualizujCeny>Zawsze</AktualizujCeny>
+    <Blokada>False</Blokada>
+    <Precyzja>2</Precyzja>
+    <VATOdMarzy>False</VATOdMarzy>
+    <DefinicjaPowstaniaObowiazkuVATInfo>
+      <Sprzedaz />
+    </DefinicjaPowstaniaObowiazkuVATInfo>
+    <DoWyprzedazy>False</DoWyprzedazy>
+    <WyborPartii>True</WyborPartii>
+    <EdycjaNazwy>False</EdycjaNazwy>
+    <Opis />
+    <MasaNetto>2 kg</MasaNetto>
+    <MasaBrutto>0</MasaBrutto>
+    <JednostkaAlternatywna />
+    <JednostkaReszty />
+    <Dostawca />
+    <ZaokraglenieZamowienia>0</ZaokraglenieZamowienia>
+    <StanMinimalny>0</StanMinimalny>
+    <StanMaksymalny>0</StanMaksymalny>
+    <PelneKomplety>False</PelneKomplety>
+    <ProduktInfo>
+      <CenaIndywidualna>False</CenaIndywidualna>
+      <CenaEwidencyjna />
+    </ProduktInfo>
+    <MinimalnaMarza>0</MinimalnaMarza>
+    <Link />
+    <AlternatywneDefinicjeStawekInfo>
+      <Sprzedaz />
+      <Zakup />
+      <PowodZmianyStawkiVat>None</PowodZmianyStawkiVat>
+    </AlternatywneDefinicjeStawekInfo>
+    <KodyKreskowe>
+      <KodKreskowy id="KodKreskowy_13">
+        <Zapis>Towar_13</Zapis>
+        <Kod>2000000001067</Kod>
+        <Jednostka>Jednostka_10</Jednostka>
+        <TypKodu>KodKreskowy</TypKodu>
+      </KodKreskowy>
+    </KodyKreskowe>
+    <PrzelicznikiTowaru />
+    <ZamiennikiTowaru />
+    <SchematyTowary />
+    <ElementyKompletu />
+    <Ceny>
+      <Cena id="Cena_37">
+        <Towar>Towar_13</Towar>
+        <Definicja>8942bfde-39ad-43ca-949a-e23949b0a56e</Definicja>
+        <Netto>380.00 PLN</Netto>
+        <Brutto>463.60 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>True</Korygowana>
+      </Cena>
+      <Cena id="Cena_38">
+        <Towar>Towar_13</Towar>
+        <Definicja>ccbff5aa-18e1-45e2-b46e-88fa4ae14f8f</Definicja>
+        <Netto>456.00 PLN</Netto>
+        <Brutto>556.32 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>False</Korygowana>
+      </Cena>
+      <Cena id="Cena_39">
+        <Towar>Towar_13</Towar>
+        <Definicja>e3b12ca1-3f8a-481d-b349-fd7f3e8d1d8b</Definicja>
+        <Netto>584.62 PLN</Netto>
+        <Brutto>713.24 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>False</Korygowana>
+      </Cena>
+    </Ceny>
+    <CenyIndywidualne />
+  </Towar>
+  <Towar id="Towar_14" guid="bb56ff47-2931-4acf-baff-5a3871f09057">
+    <Kod>LYZ_FC_42</Kod>
+    <KodCN>95067010</KodCN>
+    <Nazwa>Łyżwy figurowe czarne rozm. 42</Nazwa>
+    <NumerKatalogowy />
+    <EAN>2000000001074</EAN>
+    <PrefiksGTIN13 />
+    <Typ>Towar</Typ>
+    <Opakowanie>False</Opakowanie>
+    <Jednostka>Jednostka_10</Jednostka>
+    <DefinicjaStawki>00000000-0001-0003-0010-000000000000</DefinicjaStawki>
+    <DefinicjaStawkiZakupu>00000000-0001-0003-0010-000000000000</DefinicjaStawkiZakupu>
+    <SWW />
+    <Narzut>20.00%</Narzut>
+    <Marza>22.00%</Marza>
+    <CenaZakupuKartotekowa>0.00 PLN</CenaZakupuKartotekowa>
+    <JednostkaUzupelniajaca>Jednostka_10</JednostkaUzupelniajaca>
+    <NazwaIntrastat />
+    <KosztDodatkowy>False</KosztDodatkowy>
+    <AktualizujCeny>Zawsze</AktualizujCeny>
+    <Blokada>False</Blokada>
+    <Precyzja>2</Precyzja>
+    <VATOdMarzy>False</VATOdMarzy>
+    <DefinicjaPowstaniaObowiazkuVATInfo>
+      <Sprzedaz />
+    </DefinicjaPowstaniaObowiazkuVATInfo>
+    <DoWyprzedazy>False</DoWyprzedazy>
+    <WyborPartii>True</WyborPartii>
+    <EdycjaNazwy>False</EdycjaNazwy>
+    <Opis />
+    <MasaNetto>2 kg</MasaNetto>
+    <MasaBrutto>0</MasaBrutto>
+    <JednostkaAlternatywna />
+    <JednostkaReszty />
+    <Dostawca />
+    <ZaokraglenieZamowienia>0</ZaokraglenieZamowienia>
+    <StanMinimalny>0</StanMinimalny>
+    <StanMaksymalny>0</StanMaksymalny>
+    <PelneKomplety>False</PelneKomplety>
+    <ProduktInfo>
+      <CenaIndywidualna>False</CenaIndywidualna>
+      <CenaEwidencyjna />
+    </ProduktInfo>
+    <MinimalnaMarza>0</MinimalnaMarza>
+    <Link />
+    <AlternatywneDefinicjeStawekInfo>
+      <Sprzedaz />
+      <Zakup />
+      <PowodZmianyStawkiVat>None</PowodZmianyStawkiVat>
+    </AlternatywneDefinicjeStawekInfo>
+    <KodyKreskowe>
+      <KodKreskowy id="KodKreskowy_14">
+        <Zapis>Towar_14</Zapis>
+        <Kod>2000000001074</Kod>
+        <Jednostka>Jednostka_10</Jednostka>
+        <TypKodu>KodKreskowy</TypKodu>
+      </KodKreskowy>
+    </KodyKreskowe>
+    <PrzelicznikiTowaru />
+    <ZamiennikiTowaru />
+    <SchematyTowary />
+    <ElementyKompletu />
+    <Ceny>
+      <Cena id="Cena_40">
+        <Towar>Towar_14</Towar>
+        <Definicja>8942bfde-39ad-43ca-949a-e23949b0a56e</Definicja>
+        <Netto>400.00 PLN</Netto>
+        <Brutto>488.00 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>True</Korygowana>
+      </Cena>
+      <Cena id="Cena_41">
+        <Towar>Towar_14</Towar>
+        <Definicja>ccbff5aa-18e1-45e2-b46e-88fa4ae14f8f</Definicja>
+        <Netto>480.00 PLN</Netto>
+        <Brutto>585.60 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>False</Korygowana>
+      </Cena>
+      <Cena id="Cena_42">
+        <Towar>Towar_14</Towar>
+        <Definicja>e3b12ca1-3f8a-481d-b349-fd7f3e8d1d8b</Definicja>
+        <Netto>615.38 PLN</Netto>
+        <Brutto>750.76 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>False</Korygowana>
+      </Cena>
+    </Ceny>
+    <CenyIndywidualne />
+  </Towar>
+  <Towar id="Towar_15" guid="2a32d36b-d84e-4515-9f7c-d374666cb9bb">
+    <Kod>LYZ_HC_40</Kod>
+    <KodCN>95067010</KodCN>
+    <Nazwa>Łyżwy hokojowe czarne rozm. 40</Nazwa>
+    <NumerKatalogowy />
+    <EAN>2000000001081</EAN>
+    <PrefiksGTIN13 />
+    <Typ>Towar</Typ>
+    <Opakowanie>False</Opakowanie>
+    <Jednostka>Jednostka_10</Jednostka>
+    <DefinicjaStawki>00000000-0001-0003-0010-000000000000</DefinicjaStawki>
+    <DefinicjaStawkiZakupu>00000000-0001-0003-0010-000000000000</DefinicjaStawkiZakupu>
+    <SWW />
+    <Narzut>20.00%</Narzut>
+    <Marza>22.00%</Marza>
+    <CenaZakupuKartotekowa>0.00 PLN</CenaZakupuKartotekowa>
+    <JednostkaUzupelniajaca>Jednostka_10</JednostkaUzupelniajaca>
+    <NazwaIntrastat />
+    <KosztDodatkowy>False</KosztDodatkowy>
+    <AktualizujCeny>Zawsze</AktualizujCeny>
+    <Blokada>False</Blokada>
+    <Precyzja>2</Precyzja>
+    <VATOdMarzy>False</VATOdMarzy>
+    <DefinicjaPowstaniaObowiazkuVATInfo>
+      <Sprzedaz />
+    </DefinicjaPowstaniaObowiazkuVATInfo>
+    <DoWyprzedazy>False</DoWyprzedazy>
+    <WyborPartii>True</WyborPartii>
+    <EdycjaNazwy>False</EdycjaNazwy>
+    <Opis />
+    <MasaNetto>2 kg</MasaNetto>
+    <MasaBrutto>0</MasaBrutto>
+    <JednostkaAlternatywna />
+    <JednostkaReszty />
+    <Dostawca />
+    <ZaokraglenieZamowienia>0</ZaokraglenieZamowienia>
+    <StanMinimalny>0</StanMinimalny>
+    <StanMaksymalny>0</StanMaksymalny>
+    <PelneKomplety>False</PelneKomplety>
+    <ProduktInfo>
+      <CenaIndywidualna>False</CenaIndywidualna>
+      <CenaEwidencyjna />
+    </ProduktInfo>
+    <MinimalnaMarza>0</MinimalnaMarza>
+    <Link />
+    <AlternatywneDefinicjeStawekInfo>
+      <Sprzedaz />
+      <Zakup />
+      <PowodZmianyStawkiVat>None</PowodZmianyStawkiVat>
+    </AlternatywneDefinicjeStawekInfo>
+    <KodyKreskowe>
+      <KodKreskowy id="KodKreskowy_15">
+        <Zapis>Towar_15</Zapis>
+        <Kod>2000000001081</Kod>
+        <Jednostka>Jednostka_10</Jednostka>
+        <TypKodu>KodKreskowy</TypKodu>
+      </KodKreskowy>
+    </KodyKreskowe>
+    <PrzelicznikiTowaru />
+    <ZamiennikiTowaru />
+    <SchematyTowary />
+    <ElementyKompletu />
+    <Ceny>
+      <Cena id="Cena_43">
+        <Towar>Towar_15</Towar>
+        <Definicja>8942bfde-39ad-43ca-949a-e23949b0a56e</Definicja>
+        <Netto>420.00 PLN</Netto>
+        <Brutto>512.40 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>True</Korygowana>
+      </Cena>
+      <Cena id="Cena_44">
+        <Towar>Towar_15</Towar>
+        <Definicja>ccbff5aa-18e1-45e2-b46e-88fa4ae14f8f</Definicja>
+        <Netto>504.00 PLN</Netto>
+        <Brutto>614.88 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>False</Korygowana>
+      </Cena>
+      <Cena id="Cena_45">
+        <Towar>Towar_15</Towar>
+        <Definicja>e3b12ca1-3f8a-481d-b349-fd7f3e8d1d8b</Definicja>
+        <Netto>646.15 PLN</Netto>
+        <Brutto>788.30 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>False</Korygowana>
+      </Cena>
+    </Ceny>
+    <CenyIndywidualne />
+  </Towar>
+  <Towar id="Towar_16" guid="53050875-0287-4d65-b030-d77f373a0541">
+    <Kod>LYZ_HC_42</Kod>
+    <KodCN>95067010</KodCN>
+    <Nazwa>Łyżwy hokojowe czarne rozm. 42</Nazwa>
+    <NumerKatalogowy />
+    <EAN>2000000001098</EAN>
+    <PrefiksGTIN13 />
+    <Typ>Towar</Typ>
+    <Opakowanie>False</Opakowanie>
+    <Jednostka>Jednostka_10</Jednostka>
+    <DefinicjaStawki>00000000-0001-0003-0010-000000000000</DefinicjaStawki>
+    <DefinicjaStawkiZakupu>00000000-0001-0003-0010-000000000000</DefinicjaStawkiZakupu>
+    <SWW />
+    <Narzut>20.00%</Narzut>
+    <Marza>22.00%</Marza>
+    <CenaZakupuKartotekowa>0.00 PLN</CenaZakupuKartotekowa>
+    <JednostkaUzupelniajaca>Jednostka_10</JednostkaUzupelniajaca>
+    <NazwaIntrastat />
+    <KosztDodatkowy>False</KosztDodatkowy>
+    <AktualizujCeny>Zawsze</AktualizujCeny>
+    <Blokada>False</Blokada>
+    <Precyzja>2</Precyzja>
+    <VATOdMarzy>False</VATOdMarzy>
+    <DefinicjaPowstaniaObowiazkuVATInfo>
+      <Sprzedaz />
+    </DefinicjaPowstaniaObowiazkuVATInfo>
+    <DoWyprzedazy>False</DoWyprzedazy>
+    <WyborPartii>True</WyborPartii>
+    <EdycjaNazwy>False</EdycjaNazwy>
+    <Opis />
+    <MasaNetto>2 kg</MasaNetto>
+    <MasaBrutto>0</MasaBrutto>
+    <JednostkaAlternatywna />
+    <JednostkaReszty />
+    <Dostawca />
+    <ZaokraglenieZamowienia>0</ZaokraglenieZamowienia>
+    <StanMinimalny>0</StanMinimalny>
+    <StanMaksymalny>0</StanMaksymalny>
+    <PelneKomplety>False</PelneKomplety>
+    <ProduktInfo>
+      <CenaIndywidualna>False</CenaIndywidualna>
+      <CenaEwidencyjna />
+    </ProduktInfo>
+    <MinimalnaMarza>0</MinimalnaMarza>
+    <Link />
+    <AlternatywneDefinicjeStawekInfo>
+      <Sprzedaz />
+      <Zakup />
+      <PowodZmianyStawkiVat>None</PowodZmianyStawkiVat>
+    </AlternatywneDefinicjeStawekInfo>
+    <KodyKreskowe>
+      <KodKreskowy id="KodKreskowy_16">
+        <Zapis>Towar_16</Zapis>
+        <Kod>2000000001098</Kod>
+        <Jednostka>Jednostka_10</Jednostka>
+        <TypKodu>KodKreskowy</TypKodu>
+      </KodKreskowy>
+    </KodyKreskowe>
+    <PrzelicznikiTowaru />
+    <ZamiennikiTowaru />
+    <SchematyTowary />
+    <ElementyKompletu />
+    <Ceny>
+      <Cena id="Cena_46">
+        <Towar>Towar_16</Towar>
+        <Definicja>8942bfde-39ad-43ca-949a-e23949b0a56e</Definicja>
+        <Netto>440.00 PLN</Netto>
+        <Brutto>536.80 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>True</Korygowana>
+      </Cena>
+      <Cena id="Cena_47">
+        <Towar>Towar_16</Towar>
+        <Definicja>ccbff5aa-18e1-45e2-b46e-88fa4ae14f8f</Definicja>
+        <Netto>528.00 PLN</Netto>
+        <Brutto>644.16 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>False</Korygowana>
+      </Cena>
+      <Cena id="Cena_48">
+        <Towar>Towar_16</Towar>
+        <Definicja>e3b12ca1-3f8a-481d-b349-fd7f3e8d1d8b</Definicja>
+        <Netto>676.92 PLN</Netto>
+        <Brutto>825.84 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>False</Korygowana>
+      </Cena>
+    </Ceny>
+    <CenyIndywidualne />
+  </Towar>
+  <Towar id="Towar_48" guid="ebb2b71e-5c4a-4d90-ac00-f926d5ec3df0">
+    <Kod>WRO_1SCC</Kod>
+    <KodCN>95067030</KodCN>
+    <Nazwa>Wrotki zawodowe - 1 ślad Classic - białe</Nazwa>
+    <NumerKatalogowy />
+    <EAN>2000000001395</EAN>
+    <PrefiksGTIN13 />
+    <Typ>Towar</Typ>
+    <Opakowanie>False</Opakowanie>
+    <Jednostka>Jednostka_10</Jednostka>
+    <DefinicjaStawki>00000000-0001-0003-0010-000000000000</DefinicjaStawki>
+    <DefinicjaStawkiZakupu>00000000-0001-0003-0010-000000000000</DefinicjaStawkiZakupu>
+    <SWW />
+    <Narzut>15.00%</Narzut>
+    <Marza>22.00%</Marza>
+    <CenaZakupuKartotekowa>0.00 PLN</CenaZakupuKartotekowa>
+    <JednostkaUzupelniajaca>Jednostka_10</JednostkaUzupelniajaca>
+    <NazwaIntrastat />
+    <KosztDodatkowy>False</KosztDodatkowy>
+    <AktualizujCeny>Zawsze</AktualizujCeny>
+    <Blokada>False</Blokada>
+    <Precyzja>2</Precyzja>
+    <VATOdMarzy>False</VATOdMarzy>
+    <DefinicjaPowstaniaObowiazkuVATInfo>
+      <Sprzedaz />
+    </DefinicjaPowstaniaObowiazkuVATInfo>
+    <DoWyprzedazy>False</DoWyprzedazy>
+    <WyborPartii>True</WyborPartii>
+    <EdycjaNazwy>False</EdycjaNazwy>
+    <Opis />
+    <MasaNetto>2 kg</MasaNetto>
+    <MasaBrutto>0</MasaBrutto>
+    <JednostkaAlternatywna />
+    <JednostkaReszty />
+    <Dostawca />
+    <ZaokraglenieZamowienia>0</ZaokraglenieZamowienia>
+    <StanMinimalny>0</StanMinimalny>
+    <StanMaksymalny>0</StanMaksymalny>
+    <PelneKomplety>False</PelneKomplety>
+    <ProduktInfo>
+      <CenaIndywidualna>False</CenaIndywidualna>
+      <CenaEwidencyjna />
+    </ProduktInfo>
+    <MinimalnaMarza>0</MinimalnaMarza>
+    <Link />
+    <AlternatywneDefinicjeStawekInfo>
+      <Sprzedaz />
+      <Zakup />
+      <PowodZmianyStawkiVat>None</PowodZmianyStawkiVat>
+    </AlternatywneDefinicjeStawekInfo>
+    <KodyKreskowe>
+      <KodKreskowy id="KodKreskowy_48">
+        <Zapis>Towar_48</Zapis>
+        <Kod>2000000001395</Kod>
+        <Jednostka>Jednostka_10</Jednostka>
+        <TypKodu>KodKreskowy</TypKodu>
+      </KodKreskowy>
+    </KodyKreskowe>
+    <PrzelicznikiTowaru />
+    <ZamiennikiTowaru />
+    <SchematyTowary />
+    <ElementyKompletu />
+    <Ceny>
+      <Cena id="Cena_142">
+        <Towar>Towar_48</Towar>
+        <Definicja>8942bfde-39ad-43ca-949a-e23949b0a56e</Definicja>
+        <Netto>450.00 PLN</Netto>
+        <Brutto>549.00 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>True</Korygowana>
+      </Cena>
+      <Cena id="Cena_143">
+        <Towar>Towar_48</Towar>
+        <Definicja>ccbff5aa-18e1-45e2-b46e-88fa4ae14f8f</Definicja>
+        <Netto>517.50 PLN</Netto>
+        <Brutto>631.35 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>False</Korygowana>
+      </Cena>
+      <Cena id="Cena_144">
+        <Towar>Towar_48</Towar>
+        <Definicja>e3b12ca1-3f8a-481d-b349-fd7f3e8d1d8b</Definicja>
+        <Netto>663.46 PLN</Netto>
+        <Brutto>809.42 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>False</Korygowana>
+      </Cena>
+    </Ceny>
+    <CenyIndywidualne />
+  </Towar>
+  <Towar id="Towar_49" guid="df6f486c-dbe8-4529-bc5d-71a49aa01b05">
+    <Kod>WRO_1SXC</Kod>
+    <KodCN>95067030</KodCN>
+    <Nazwa>Wrotki zawodowe - 1 ślad Extreme - czarne</Nazwa>
+    <NumerKatalogowy />
+    <EAN>2000000000961</EAN>
+    <PrefiksGTIN13 />
+    <Typ>Towar</Typ>
+    <Opakowanie>False</Opakowanie>
+    <Jednostka>Jednostka_10</Jednostka>
+    <DefinicjaStawki>00000000-0001-0003-0010-000000000000</DefinicjaStawki>
+    <DefinicjaStawkiZakupu>00000000-0001-0003-0010-000000000000</DefinicjaStawkiZakupu>
+    <SWW />
+    <Narzut>15.00%</Narzut>
+    <Marza>22.00%</Marza>
+    <CenaZakupuKartotekowa>0.00 PLN</CenaZakupuKartotekowa>
+    <JednostkaUzupelniajaca>Jednostka_10</JednostkaUzupelniajaca>
+    <NazwaIntrastat />
+    <KosztDodatkowy>False</KosztDodatkowy>
+    <AktualizujCeny>Zawsze</AktualizujCeny>
+    <Blokada>False</Blokada>
+    <Precyzja>2</Precyzja>
+    <VATOdMarzy>False</VATOdMarzy>
+    <DefinicjaPowstaniaObowiazkuVATInfo>
+      <Sprzedaz />
+    </DefinicjaPowstaniaObowiazkuVATInfo>
+    <DoWyprzedazy>False</DoWyprzedazy>
+    <WyborPartii>True</WyborPartii>
+    <EdycjaNazwy>False</EdycjaNazwy>
+    <Opis />
+    <MasaNetto>2 kg</MasaNetto>
+    <MasaBrutto>0</MasaBrutto>
+    <JednostkaAlternatywna />
+    <JednostkaReszty />
+    <Dostawca />
+    <ZaokraglenieZamowienia>0</ZaokraglenieZamowienia>
+    <StanMinimalny>0</StanMinimalny>
+    <StanMaksymalny>0</StanMaksymalny>
+    <PelneKomplety>False</PelneKomplety>
+    <ProduktInfo>
+      <CenaIndywidualna>False</CenaIndywidualna>
+      <CenaEwidencyjna />
+    </ProduktInfo>
+    <MinimalnaMarza>0</MinimalnaMarza>
+    <Link />
+    <AlternatywneDefinicjeStawekInfo>
+      <Sprzedaz />
+      <Zakup />
+      <PowodZmianyStawkiVat>None</PowodZmianyStawkiVat>
+    </AlternatywneDefinicjeStawekInfo>
+    <KodyKreskowe>
+      <KodKreskowy id="KodKreskowy_49">
+        <Zapis>Towar_49</Zapis>
+        <Kod>2000000000961</Kod>
+        <Jednostka>Jednostka_10</Jednostka>
+        <TypKodu>KodKreskowy</TypKodu>
+      </KodKreskowy>
+    </KodyKreskowe>
+    <PrzelicznikiTowaru />
+    <ZamiennikiTowaru />
+    <SchematyTowary />
+    <ElementyKompletu />
+    <Ceny>
+      <Cena id="Cena_145">
+        <Towar>Towar_49</Towar>
+        <Definicja>8942bfde-39ad-43ca-949a-e23949b0a56e</Definicja>
+        <Netto>450.00 PLN</Netto>
+        <Brutto>549.00 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>True</Korygowana>
+      </Cena>
+      <Cena id="Cena_146">
+        <Towar>Towar_49</Towar>
+        <Definicja>ccbff5aa-18e1-45e2-b46e-88fa4ae14f8f</Definicja>
+        <Netto>517.50 PLN</Netto>
+        <Brutto>631.35 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>False</Korygowana>
+      </Cena>
+      <Cena id="Cena_147">
+        <Towar>Towar_49</Towar>
+        <Definicja>e3b12ca1-3f8a-481d-b349-fd7f3e8d1d8b</Definicja>
+        <Netto>663.46 PLN</Netto>
+        <Brutto>809.42 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>False</Korygowana>
+      </Cena>
+    </Ceny>
+    <CenyIndywidualne />
+  </Towar>
+  <Towar id="Towar_50" guid="e70fb537-2f51-48ea-a3f2-f6a1230a1491">
+    <Kod>WRO_2SCC</Kod>
+    <KodCN>95067030</KodCN>
+    <Nazwa>Wrotki zawodowe - 2 ślady Classic - czarne</Nazwa>
+    <NumerKatalogowy />
+    <EAN>2000000001401</EAN>
+    <PrefiksGTIN13 />
+    <Typ>Towar</Typ>
+    <Opakowanie>False</Opakowanie>
+    <Jednostka>Jednostka_10</Jednostka>
+    <DefinicjaStawki>00000000-0001-0003-0010-000000000000</DefinicjaStawki>
+    <DefinicjaStawkiZakupu>00000000-0001-0003-0010-000000000000</DefinicjaStawkiZakupu>
+    <SWW />
+    <Narzut>15.00%</Narzut>
+    <Marza>22.00%</Marza>
+    <CenaZakupuKartotekowa>0.00 PLN</CenaZakupuKartotekowa>
+    <JednostkaUzupelniajaca>Jednostka_10</JednostkaUzupelniajaca>
+    <NazwaIntrastat />
+    <KosztDodatkowy>False</KosztDodatkowy>
+    <AktualizujCeny>Zawsze</AktualizujCeny>
+    <Blokada>False</Blokada>
+    <Precyzja>2</Precyzja>
+    <VATOdMarzy>False</VATOdMarzy>
+    <DefinicjaPowstaniaObowiazkuVATInfo>
+      <Sprzedaz />
+    </DefinicjaPowstaniaObowiazkuVATInfo>
+    <DoWyprzedazy>False</DoWyprzedazy>
+    <WyborPartii>True</WyborPartii>
+    <EdycjaNazwy>False</EdycjaNazwy>
+    <Opis />
+    <MasaNetto>2 kg</MasaNetto>
+    <MasaBrutto>0</MasaBrutto>
+    <JednostkaAlternatywna />
+    <JednostkaReszty />
+    <Dostawca />
+    <ZaokraglenieZamowienia>0</ZaokraglenieZamowienia>
+    <StanMinimalny>0</StanMinimalny>
+    <StanMaksymalny>0</StanMaksymalny>
+    <PelneKomplety>False</PelneKomplety>
+    <ProduktInfo>
+      <CenaIndywidualna>False</CenaIndywidualna>
+      <CenaEwidencyjna />
+    </ProduktInfo>
+    <MinimalnaMarza>0</MinimalnaMarza>
+    <Link />
+    <AlternatywneDefinicjeStawekInfo>
+      <Sprzedaz />
+      <Zakup />
+      <PowodZmianyStawkiVat>None</PowodZmianyStawkiVat>
+    </AlternatywneDefinicjeStawekInfo>
+    <KodyKreskowe>
+      <KodKreskowy id="KodKreskowy_50">
+        <Zapis>Towar_50</Zapis>
+        <Kod>2000000001401</Kod>
+        <Jednostka>Jednostka_10</Jednostka>
+        <TypKodu>KodKreskowy</TypKodu>
+      </KodKreskowy>
+    </KodyKreskowe>
+    <PrzelicznikiTowaru />
+    <ZamiennikiTowaru />
+    <SchematyTowary />
+    <ElementyKompletu />
+    <Ceny>
+      <Cena id="Cena_148">
+        <Towar>Towar_50</Towar>
+        <Definicja>8942bfde-39ad-43ca-949a-e23949b0a56e</Definicja>
+        <Netto>450.00 PLN</Netto>
+        <Brutto>549.00 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>True</Korygowana>
+      </Cena>
+      <Cena id="Cena_149">
+        <Towar>Towar_50</Towar>
+        <Definicja>ccbff5aa-18e1-45e2-b46e-88fa4ae14f8f</Definicja>
+        <Netto>517.50 PLN</Netto>
+        <Brutto>631.35 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>False</Korygowana>
+      </Cena>
+      <Cena id="Cena_150">
+        <Towar>Towar_50</Towar>
+        <Definicja>e3b12ca1-3f8a-481d-b349-fd7f3e8d1d8b</Definicja>
+        <Netto>663.46 PLN</Netto>
+        <Brutto>809.42 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>False</Korygowana>
+      </Cena>
+    </Ceny>
+    <CenyIndywidualne />
+  </Towar>
+  <Towar id="Towar_51" guid="0373879f-bca4-4536-b96c-2a519c405d4c">
+    <Kod>WRO_2SXC</Kod>
+    <KodCN>95067030</KodCN>
+    <Nazwa>Wrotki zawodowe - 2 ślady Extreme - czarne</Nazwa>
+    <NumerKatalogowy />
+    <EAN>2000000001418</EAN>
+    <PrefiksGTIN13 />
+    <Typ>Towar</Typ>
+    <Opakowanie>False</Opakowanie>
+    <Jednostka>Jednostka_10</Jednostka>
+    <DefinicjaStawki>00000000-0001-0003-0010-000000000000</DefinicjaStawki>
+    <DefinicjaStawkiZakupu>00000000-0001-0003-0010-000000000000</DefinicjaStawkiZakupu>
+    <SWW />
+    <Narzut>15.00%</Narzut>
+    <Marza>22.00%</Marza>
+    <CenaZakupuKartotekowa>0.00 PLN</CenaZakupuKartotekowa>
+    <JednostkaUzupelniajaca>Jednostka_10</JednostkaUzupelniajaca>
+    <NazwaIntrastat />
+    <KosztDodatkowy>False</KosztDodatkowy>
+    <AktualizujCeny>Zawsze</AktualizujCeny>
+    <Blokada>False</Blokada>
+    <Precyzja>2</Precyzja>
+    <VATOdMarzy>False</VATOdMarzy>
+    <DefinicjaPowstaniaObowiazkuVATInfo>
+      <Sprzedaz />
+    </DefinicjaPowstaniaObowiazkuVATInfo>
+    <DoWyprzedazy>False</DoWyprzedazy>
+    <WyborPartii>True</WyborPartii>
+    <EdycjaNazwy>False</EdycjaNazwy>
+    <Opis />
+    <MasaNetto>2 kg</MasaNetto>
+    <MasaBrutto>0</MasaBrutto>
+    <JednostkaAlternatywna />
+    <JednostkaReszty />
+    <Dostawca />
+    <ZaokraglenieZamowienia>0</ZaokraglenieZamowienia>
+    <StanMinimalny>0</StanMinimalny>
+    <StanMaksymalny>0</StanMaksymalny>
+    <PelneKomplety>False</PelneKomplety>
+    <ProduktInfo>
+      <CenaIndywidualna>False</CenaIndywidualna>
+      <CenaEwidencyjna />
+    </ProduktInfo>
+    <MinimalnaMarza>0</MinimalnaMarza>
+    <Link />
+    <AlternatywneDefinicjeStawekInfo>
+      <Sprzedaz />
+      <Zakup />
+      <PowodZmianyStawkiVat>None</PowodZmianyStawkiVat>
+    </AlternatywneDefinicjeStawekInfo>
+    <KodyKreskowe>
+      <KodKreskowy id="KodKreskowy_51">
+        <Zapis>Towar_51</Zapis>
+        <Kod>2000000001418</Kod>
+        <Jednostka>Jednostka_10</Jednostka>
+        <TypKodu>KodKreskowy</TypKodu>
+      </KodKreskowy>
+    </KodyKreskowe>
+    <PrzelicznikiTowaru />
+    <ZamiennikiTowaru />
+    <SchematyTowary />
+    <ElementyKompletu />
+    <Ceny>
+      <Cena id="Cena_151">
+        <Towar>Towar_51</Towar>
+        <Definicja>8942bfde-39ad-43ca-949a-e23949b0a56e</Definicja>
+        <Netto>450.00 PLN</Netto>
+        <Brutto>549.00 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>True</Korygowana>
+      </Cena>
+      <Cena id="Cena_152">
+        <Towar>Towar_51</Towar>
+        <Definicja>ccbff5aa-18e1-45e2-b46e-88fa4ae14f8f</Definicja>
+        <Netto>517.50 PLN</Netto>
+        <Brutto>631.35 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>False</Korygowana>
+      </Cena>
+      <Cena id="Cena_153">
+        <Towar>Towar_51</Towar>
+        <Definicja>e3b12ca1-3f8a-481d-b349-fd7f3e8d1d8b</Definicja>
+        <Netto>663.46 PLN</Netto>
+        <Brutto>809.42 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>False</Korygowana>
+      </Cena>
+    </Ceny>
+    <CenyIndywidualne />
+  </Towar>
+  <Towar id="Towar_52" guid="ea81c892-2405-4588-9933-d3d111e1df34">
+    <Kod>WRO_2SMC</Kod>
+    <KodCN>95067030</KodCN>
+    <Nazwa>Wrotki zawodowe - 2 ślady Medium - czarne</Nazwa>
+    <NumerKatalogowy />
+    <EAN>2000000001425</EAN>
+    <PrefiksGTIN13 />
+    <Typ>Towar</Typ>
+    <Opakowanie>False</Opakowanie>
+    <Jednostka>Jednostka_10</Jednostka>
+    <DefinicjaStawki>00000000-0001-0003-0010-000000000000</DefinicjaStawki>
+    <DefinicjaStawkiZakupu>00000000-0001-0003-0010-000000000000</DefinicjaStawkiZakupu>
+    <SWW />
+    <Narzut>15.00%</Narzut>
+    <Marza>22.00%</Marza>
+    <CenaZakupuKartotekowa>0.00 PLN</CenaZakupuKartotekowa>
+    <JednostkaUzupelniajaca>Jednostka_10</JednostkaUzupelniajaca>
+    <NazwaIntrastat />
+    <KosztDodatkowy>False</KosztDodatkowy>
+    <AktualizujCeny>Zawsze</AktualizujCeny>
+    <Blokada>False</Blokada>
+    <Precyzja>2</Precyzja>
+    <VATOdMarzy>False</VATOdMarzy>
+    <DefinicjaPowstaniaObowiazkuVATInfo>
+      <Sprzedaz />
+    </DefinicjaPowstaniaObowiazkuVATInfo>
+    <DoWyprzedazy>False</DoWyprzedazy>
+    <WyborPartii>True</WyborPartii>
+    <EdycjaNazwy>False</EdycjaNazwy>
+    <Opis />
+    <MasaNetto>2 kg</MasaNetto>
+    <MasaBrutto>0</MasaBrutto>
+    <JednostkaAlternatywna />
+    <JednostkaReszty />
+    <Dostawca />
+    <ZaokraglenieZamowienia>0</ZaokraglenieZamowienia>
+    <StanMinimalny>0</StanMinimalny>
+    <StanMaksymalny>0</StanMaksymalny>
+    <PelneKomplety>False</PelneKomplety>
+    <ProduktInfo>
+      <CenaIndywidualna>False</CenaIndywidualna>
+      <CenaEwidencyjna />
+    </ProduktInfo>
+    <MinimalnaMarza>0</MinimalnaMarza>
+    <Link />
+    <AlternatywneDefinicjeStawekInfo>
+      <Sprzedaz />
+      <Zakup />
+      <PowodZmianyStawkiVat>None</PowodZmianyStawkiVat>
+    </AlternatywneDefinicjeStawekInfo>
+    <KodyKreskowe>
+      <KodKreskowy id="KodKreskowy_52">
+        <Zapis>Towar_52</Zapis>
+        <Kod>2000000001425</Kod>
+        <Jednostka>Jednostka_10</Jednostka>
+        <TypKodu>KodKreskowy</TypKodu>
+      </KodKreskowy>
+    </KodyKreskowe>
+    <PrzelicznikiTowaru />
+    <ZamiennikiTowaru />
+    <SchematyTowary />
+    <ElementyKompletu />
+    <Ceny>
+      <Cena id="Cena_154">
+        <Towar>Towar_52</Towar>
+        <Definicja>8942bfde-39ad-43ca-949a-e23949b0a56e</Definicja>
+        <Netto>450.00 PLN</Netto>
+        <Brutto>549.00 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>True</Korygowana>
+      </Cena>
+      <Cena id="Cena_155">
+        <Towar>Towar_52</Towar>
+        <Definicja>ccbff5aa-18e1-45e2-b46e-88fa4ae14f8f</Definicja>
+        <Netto>517.50 PLN</Netto>
+        <Brutto>631.35 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>False</Korygowana>
+      </Cena>
+      <Cena id="Cena_156">
+        <Towar>Towar_52</Towar>
+        <Definicja>e3b12ca1-3f8a-481d-b349-fd7f3e8d1d8b</Definicja>
+        <Netto>663.46 PLN</Netto>
+        <Brutto>809.42 PLN</Brutto>
+        <StandardowaIlosc>1 para</StandardowaIlosc>
+        <Polacz>True</Polacz>
+        <Korygowana>False</Korygowana>
+      </Cena>
+    </Ceny>
+    <CenyIndywidualne />
+  </Towar>
+</session>

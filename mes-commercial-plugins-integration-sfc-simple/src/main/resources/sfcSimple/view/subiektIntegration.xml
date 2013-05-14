@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    ***************************************************************************
+    Copyright (c) 2010 Qcadoo Limited
+    Project: Qcadoo Framework
+    Version: 1.2.0
+
+    This file is part of Qcadoo.
+
+    Qcadoo is free software; you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published
+    by the Free Software Foundation; either version 3 of the License,
+    or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty
+    of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+    See the GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+    ***************************************************************************
+
+-->
+<view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schema.qcadoo.org/view" 
+	xsi:schemaLocation="http://schema.qcadoo.org/view http://schema.qcadoo.org/view.xsd"
+	name="subiektIntegration"
+	menuAccessible="true"
+	modelName="subiektImportedOrder">
+	
+	<component type="window" name="window" reference="window" header="false" fixedHeight="true">
+		<ribbon>
+			<group name="import">
+				<bigButton name="uploadFile" state="enabled" icon="downloadIcon24.png" action="#{ordersGrid}.fireEvent(downloadIntegrationFile);"/>
+			</group>
+		</ribbon>
+		<windowTab name="ordersTab">
+			<ribbon>
+				<group name="convert">
+					<bigButton name="convertOrders" state="disabled" icon="updateIcon24.png">
+						<script>
+							<![CDATA[
+								this.removeOnChangeListeners();
+								this.addOnChangeListener({
+									onClick: function() {
+										if (window.confirm("#{translate(integrationSubiekt.ribbon.confirms.convertOrders)}")) {
+											#{ordersGrid}.performEvent('convertOrders', []);
+										}
+									}
+								});
+								#{ordersGrid}.addOnChangeListener({
+									onChange: function(selectedArray) {
+										if (selectedArray.length == 0) {
+											this.disable();
+										} else {
+											this.enable();
+										}
+									}
+								});
+							]]>
+						</script>
+					</bigButton>
+				</group>
+				<group name="actions">
+					<smallButton name="delete" state="disabled" icon="deleteIcon16.png" action="#{ordersGrid}.performDelete;">
+						<script>
+							<![CDATA[
+								#{ordersGrid}.addOnChangeListener({
+									onChange: function(selectedArray) {
+										if (selectedArray.length == 0) {
+											this.disable();
+										} else {
+											this.enable();
+										}
+									}
+								});
+							]]>
+						</script>
+					</smallButton>
+					<smallButton name="refresh" icon="updateIcon16.png" state="enabled" action="#{window}.performRefresh;" />
+				</group>
+			</ribbon>
+			<component type="grid" name="ordersGrid" reference="ordersGrid" model="subiektImportedOrder">
+				<option type="column" name="number" fields="number" link="true"/>
+				<option type="column" name="drawDate" fields="drawDate" width="70"/>
+				<option type="column" name="clientName" fields="clientName" width="150"/>
+				<option type="column" name="realizationDate" fields="realizationDate" width="70"/>
+				<option type="column" name="converted" fields="converted" width="50"/>
+				<option type="order" column="number" direction="desc" />
+				<option type="correspondingView" value="sfcSimple/subiektOrderDetails" />
+				<option type="correspondingComponent" value="form" />
+				<option type="correspondingViewInModal" value="true" />
+				<option type="searchable" value="number,drawDate,clientName,realizationDate,converted" />
+				<option type="orderable" value="number,drawDate,clientName,realizationDate,converted" />
+				<option type="fullscreen" value="true" />
+				<option type="multiselect" value="true" />
+				<listener event="convertOrders" class="com.qcadoo.mes.integration.sfcSimple.IntegrationSubiektViewHook" method="convertOrdersClick" />
+				<listener event="downloadIntegrationFile" class="com.qcadoo.mes.integration.sfcSimple.IntegrationSubiektViewHook" method="onUploadButtonClick" />
+			</component>
+		</windowTab>
+		<windowTab name="productsTab">
+			<ribbon>
+				<group name="convert">
+					<bigButton name="convertProducts" state="enabled" icon="updateIcon24.png">
+						<script>
+							<![CDATA[
+								this.removeOnChangeListeners();
+								this.addOnChangeListener({
+									onClick: function() {
+										if (window.confirm("#{translate(integrationSubiekt.ribbon.confirms.convertProducts)}")) {
+											#{productsGrid}.performEvent('convertProducts', []);
+										}
+									}
+								});
+								#{productsGrid}.addOnChangeListener({
+									onChange: function(selectedArray) {
+										if (selectedArray.length == 0) {
+											this.disable();
+										} else {
+											this.enable();
+										}
+									}
+								});
+							]]>
+						</script>
+					</bigButton>
+				</group>
+				<group name="actions">
+					<smallButton name="delete" state="disabled" icon="deleteIcon16.png" action="#{productsGrid}.performDelete;">
+						<script>
+							<![CDATA[
+								#{productsGrid}.addOnChangeListener({
+									onChange: function(selectedArray) {
+										if (selectedArray.length == 0) {
+											this.disable();
+										} else {
+											this.enable();
+										}
+									}
+								});
+							]]>
+						</script>
+					</smallButton>
+					<smallButton name="refresh" icon="updateIcon16.png" state="enabled" action="#{window}.performRefresh;" />
+				</group>
+			</ribbon>
+			<component type="grid" name="productsGrid" reference="productsGrid" model="subiektImportedProduct">
+				<option type="column" name="type" fields="type" width="50"/>
+				<option type="column" name="identificationCode" fields="identificationCode" link="true" width="50"/>
+				<option type="column" name="name" fields="name" link="true"/>
+				<option type="column" name="unit" fields="unit" width="50"/>
+				<option type="column" name="description" fields="description" width="150"/>
+				<option type="column" name="converted" fields="converted" width="50"/>
+				<option type="correspondingView" value="sfcSimple/subiektProductDetails" />
+				<option type="correspondingComponent" value="form" />
+				<option type="correspondingViewInModal" value="true" />
+				<option type="order" column="identificationCode" direction="desc" />
+				<option type="searchable" value="type,identificationCode,name,unit,description,converted" />
+				<option type="orderable" value="type,identificationCode,name,unit,description,converted" />
+				<option type="fullscreen" value="true" />
+				<option type="multiselect" value="true" />
+				<listener event="convertProducts" class="com.qcadoo.mes.integration.sfcSimple.IntegrationSubiektViewHook" method="convertProductsClick" />
+			</component>
+		</windowTab>
+	</component>
+</view>
